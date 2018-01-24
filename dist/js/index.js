@@ -115,6 +115,156 @@ define(["jquery", "jquery-cookie"], function($){
 			})
 		
 			//获取hotitems数据
+			$.ajax({
+				url: "../data/hotitems_list.json",
+				type: "GET",
+				success: function(res){
+					var html = "";
+					var html3li = "";
+					for(var i = 0; i < 2; i++){
+						html += `<li>
+											<div class="hotitems_left">
+												<a href="#">
+													<img src="${res[0].img}" alt="" />
+												</a>
+											</div>
+											<div class="hotitems_right">
+												<div class="hotitems_top">
+													<div class="hotitems_top1">
+														<div class="hotitems_toptext">
+															<p>${res[1].ename}</p>
+															<p>${res[1].cname}</p>
+															<p>${res[1].price}</p>
+														</div>
+														<div class="hotitems_toppic">
+															<a href="#">
+																<img src="${res[1].img}" alt="" />
+															</a>
+														</div>
+													</div>
+													<div class="hotitems_top1 hotitems_top2">
+														<div class="hotitems_toptext">
+															<p>${res[2].ename}</p>
+															<p>${res[2].cname}</p>
+															<p>${res[2].price}</p>
+														</div>
+														<div class="hotitems_toppic">
+															<a href="#">
+																<img src="${res[2].img}" alt="" />
+															</a>
+														</div>
+													</div>
+													<div class="hotitems_top1">
+														<div class="hotitems_toptext">
+															<p>${res[3].ename}</p>
+															<p>${res[3].cname}</p>
+															<p>${res[3].price}</p>
+														</div>
+														<div class="hotitems_toppic">
+															<a href="#">
+																<img src="${res[3].img}" alt="" />
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="hotitems_bottom">
+													<div class="hotitems_bottom1">
+														<div class="hotitems_toptext">
+															<p>${res[4].ename}</p>
+															<p>${res[4].cname}</p>
+															<p>${res[4].price}</p>
+														</div>
+														<div class="hotitems_toppic">
+															<a href="#">
+																<img src="${res[4].img}" alt="" />
+															</a>
+														</div>
+													</div>
+													<div class="hotitems_bottom1">
+														<div class="hotitems_toptext">
+															<p>${res[5].ename}</p>
+															<p>${res[5].cname}</p>
+															<p>${res[5].price}</p>
+														</div>
+														<div class="hotitems_toppic">
+															<a href="#">
+																<img src="${res[5].img}" alt="" />
+															</a>
+														</div>
+													</div>
+													<div class="hotitems_bottom1">
+														<div class="hotitems_toptext">
+															<p>${res[6].ename}</p>
+															<p>${res[6].cname}</p>
+															<p>${res[6].price}</p>
+														</div>
+														<div class="hotitems_toppic">
+															<a href="#">
+																<img src="${res[6].img}" alt="" />
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>`;
+					}
+					html3li = `<li>
+										<div class="hotitems_3li">
+											<div class="hotitems_3li_one hotitems_3li_img">
+												<dl>
+													<dd>
+														<a href="#">
+															<img src="${res[7].img}" alt="" />
+														</a>
+													</dd>
+												</dl>
+											</div>
+										</div>
+										<div class="hotitems_3li">
+											<div class="hotitems_3li_two hotitems_3li_img">
+												<dl>
+													<dd>
+														<a href="#">
+															<img src="${res[8].img}" alt="" />
+														</a>
+													</dd>
+												</dl>
+											</div>
+											<div class="hotitems_3li_two hotitems_3li_img">
+												<dl>
+													<dd>
+														<a href="#">
+															<img src="${res[9].img}" alt="" />
+														</a>
+													</dd>
+												</dl>
+											</div>
+										</div>
+										<div class="hotitems_3li">
+											<div class="hotitems_3li_two hotitems_3li_img">
+												<dl>
+													<dd>
+														<a href="#">
+															<img src="${res[10].img}" alt="" />
+														</a>
+													</dd>
+												</dl>
+											</div>
+											<div class="hotitems_3li_two hotitems_3li_img">
+												<dl>
+													<dd>
+														<a href="#">
+															<img src="${res[11].img}" alt="" />
+														</a>
+													</dd>
+												</dl>
+											</div>
+										</div>
+									</li>`;
+					html += html3li;
+					$(".hotitems_box").html(html);
+				}
+			})
 			//hotitems中文字和图片的动画
 			$(".hotitems_box").on("mouseenter", ".hotitems_top1", function(){
 				$(this).find(".hotitems_toptext").stop().animate({left: -20}, 200);
@@ -129,16 +279,16 @@ define(["jquery", "jquery-cookie"], function($){
 				$(this).find(".hotitems_toppic").stop().animate({left: 0}, 200);
 			})
 			$(".hotitems_box").on("mouseenter", ".hotitems_bottom1", function(){
-				$(this).find(".hotitems_bottomtext").stop().animate({left: -20}, 200);
+				$(this).find(".hotitems_toptext").stop().animate({left: -20}, 200);
 			})
 			$(".hotitems_box").on("mouseleave", ".hotitems_bottom1", function(){
-				$(this).find(".hotitems_bottomtext").stop().animate({left: 0}, 200);
+				$(this).find(".hotitems_toptext").stop().animate({left: 0}, 200);
 			})
 			$(".hotitems_box").on("mouseenter", ".hotitems_bottom1", function(){
-				$(this).find(".hotitems_bottompic").stop().animate({left: 20}, 200);
+				$(this).find(".hotitems_toppic").stop().animate({left: 20}, 200);
 			})
 			$(".hotitems_box").on("mouseleave", ".hotitems_bottom1", function(){
-				$(this).find(".hotitems_bottompic").stop().animate({left: 0}, 200);
+				$(this).find(".hotitems_toppic").stop().animate({left: 0}, 200);
 			})
 			//左右滑动
 			$(".hotitems_tab").on("mouseenter", "li", function(){
@@ -146,6 +296,224 @@ define(["jquery", "jquery-cookie"], function($){
 				$(this).attr("class", "active");
 				$(".hotitems_box").stop().animate({left: -1210 * $(this).index()}, 200);
 			})
+		
+			//达成shoppingmall_list的上下滚动
+			$(".shoppingmall_list").find("li").mouseenter(".shoppingmall_box", function(){
+				$(this).stop().animate({top: -50}, 250);
+			})
+			$(".shoppingmall_list").find("li").mouseleave(".shoppingmall_box", function(){
+				$(this).stop().animate({top: 0}, 250);
+			})
+			
+
+			//获取goods数据
+			$.ajax({
+				url: "../data/goods.json",
+				type: "GET",
+				success: function(res){
+					var html = "";
+					var htmlFirst = "";
+					for(var i = 0; i < res.length; i++){
+						html = `<div class="goods1">
+									<ul class="goodslinks">
+										<li><a href="#">单肩包</a></li>
+										<li><a href="#">手提包</a></li>
+										<li><a href="#">手提斜挎包</a></li>
+										<li><a href="#">双肩包</a></li>
+										<li><a href="#">手拿包</a></li>
+										<li><a href="#">钱包</a></li>
+										<li><a href="#">小皮件</a></li>
+										<li><a href="#">旅行箱/包</a></li>
+										<li><a href="#">斜挎包</a></li>
+										<li><a href="#">化妆箱/包</a></li>
+									</ul>
+									<div class="slider">
+										<div class="bx_wrapper">
+											<div class="bx_viewport">
+												<ul class="sliderbox">
+													<li class="bx_clone">
+														<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+														<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+														<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+														<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+													</li>
+													<li>
+														<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+														<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+														<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+														<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+													</li>
+													<li>
+														<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+														<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+														<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+														<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+													</li>
+													<li>
+														<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+														<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+														<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+														<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+													</li>
+													<li class="bx_clone">
+														<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+														<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+														<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+														<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+													</li>
+												</ul>
+											</div>
+											<div class="bx_controls">
+												<div class="bx_pager">
+													<div class="bx_pager_item"><a class="active"></a></div>
+													<div class="bx_pager_item"><a></a></div>
+													<div class="bx_pager_item"><a></a></div>
+												</div>
+												<div class="bx_controls_direction">
+													<a class="bx_prev"></a>
+													<a class="bx_next"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="goods2">
+									<a href="#"><img src="${res[i].showimg}" alt="" /></a>
+									<div class="goods2_label">
+										<dl>
+											<dd>${res[i].name}</dd>
+											<dd><b></b></dd>
+											<dd>${res[i].desc1}</dd>
+											<dt>${res[i].desc2}</dt>
+										</dl>
+									</div>
+								</div>
+								<div class="goods3">
+									<div class="goods3pic">
+										<a href=""><img src="${res[i].img}" alt="" /></a>
+									</div>
+									<div class="goods3pic">
+										<a href=""><img src="${res[i].img}" alt="" /></a>
+									</div>
+									<div class="goods3pic">
+										<a href=""><img src="${res[i].img}" alt="" /></a>
+									</div>
+									<div class="goods3pic">
+										<a href=""><img src="${res[i].img}" alt="" /></a>
+									</div>
+								</div>`;
+						$(".goods").eq(i).html(html);
+					}
+				}
+			})
+			
+			//获取promotion_box中的event数据
+			$.ajax({
+				url: "../data/event.json",
+				type: "GET",
+				success: function(res){
+					var html = "";
+					html = `<div class="promotion1">
+								<div class="promotion1pic pro1pic1">
+									<a href=""><img src="${res[0].img}" alt="" /></a>
+								</div>
+								<div class="promotion1pic pro1pic2">
+									<a href=""><img src="${res[1].img}" alt="" /></a>
+								</div>
+								<div class="promotion1pic">
+									<a href=""><img src="${res[2].img}" alt="" /></a>
+								</div>
+							</div>
+							<div class="promotion2">
+								<div class="promotion1pic pro1pic2">
+									<a href=""><img src="${res[3].img}" alt="" /></a>
+								</div>
+								<div class="promotion1pic pro1pic2">
+									<a href=""><img src="${res[4].img}" alt="" /></a>
+								</div>
+								<div class="promotion1pic">
+									<a href=""><img src="${res[5].img}" alt="" /></a>
+								</div>
+							</div>
+							<div class="promotion3">
+								<div class="proleft">
+									<div class="proleftpic">
+										<div class="proleftpicbox">
+											<a href="#"><img src="${res[6].img}" alt="" /></a>
+											<div class="topline"></div>
+											<div class="rightline"></div>
+											<div class="bottomline"></div>
+											<div class="leftline"></div>
+										</div>
+									</div>
+									<div class="proleftpic">
+										<div class="proleftpicbox">
+											<a href="#"><img src="${res[6].img}" alt="" /></a>
+											<div class="topline"></div>
+											<div class="rightline"></div>
+											<div class="bottomline"></div>
+											<div class="leftline"></div>
+										</div>
+									</div>
+									<div class="proleftpic">
+										<div class="proleftpicbox">
+											<a href="#"><img src="${res[6].img}" alt="" /></a>
+											<div class="topline"></div>
+											<div class="rightline"></div>
+											<div class="bottomline"></div>
+											<div class="leftline"></div>
+										</div>
+									</div>
+									<div class="proleftpic">
+										<div class="proleftpicbox">
+											<a href="#"><img src="${res[6].img}" alt="" /></a>
+											<div class="topline"></div>
+											<div class="rightline"></div>
+											<div class="bottomline"></div>
+											<div class="leftline"></div>
+										</div>
+									</div>
+									<div class="proleftpic">
+										<div class="proleftpicbox">
+											<a href="#"><img src="${res[6].img}" alt="" /></a>
+											<div class="topline"></div>
+											<div class="rightline"></div>
+											<div class="bottomline"></div>
+											<div class="leftline"></div>
+										</div>
+									</div>
+									<div class="proleftpic">
+										<div class="proleftpicbox">
+											<a href="#"><img src="${res[6].img}" alt="" /></a>
+											<div class="topline"></div>
+											<div class="rightline"></div>
+											<div class="bottomline"></div>
+											<div class="leftline"></div>
+										</div>
+									</div>
+								</div>
+								<div class="proright">
+									<a href="#"><img src="${res[7].img}" alt="" /></a>
+								</div>
+							</div>`;
+					$(".promotion_box").html(html);
+				}
+			})
+			//promotion_box左下角的动画效果
+			$(".promotion_box").on("mouseenter", ".proleftpicbox", function(){
+				$(this).find(".topline").stop().animate({width: 194}, 200);
+				$(this).find(".rightline").stop().animate({height: 65}, 200);
+				$(this).find(".bottomline").stop().animate({width: 194}, 200);
+				$(this).find(".leftline").stop().animate({height: 65}, 200);
+			})
+			$(".promotion_box").on("mouseleave", ".proleftpicbox", function(){
+				$(this).find(".topline").stop().animate({width: 0}, 200);
+				$(this).find(".rightline").stop().animate({height: 0}, 200);
+				$(this).find(".bottomline").stop().animate({width: 0}, 200);
+				$(this).find(".leftline").stop().animate({height: 0}, 200);
+			})
+			
+			
 		})
 		return "index.js载入成功";
 	}
