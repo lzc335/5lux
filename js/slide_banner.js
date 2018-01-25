@@ -9,7 +9,7 @@ define(["jquery"], function($){
 		//设置iNow，代表当前显示的图片的下标
 		var iNow = 0;
 		var timer = null;
-
+		var isRun = false;//记录是否正在滚动，当一次滚动完成后，再进行下一次滚动
 		aBtns.mouseenter(function(){
 			//移向按钮，将当前的iNow改成当前按钮的下标
 			iNow = $(this).index();
@@ -17,21 +17,26 @@ define(["jquery"], function($){
 		})
 		//点击向左，切换轮播图
 		oLeft.click(function(){
-			if(iNow == 0){//当轮播图是第一个时，换到最后一个
-				iNow = aBtns.size() - 1;
-			}else{
-				iNow = iNow - 1;
+			if(!isRun){
+				if(iNow == 0){//当轮播图是第一个时，换到最后一个
+					iNow = aBtns.size() - 1;
+				}else{
+					iNow = iNow - 1;
+				}
+				tab();
 			}
-			tab();
 		})
 		//点击向右，切换轮播图
 		oRight.click(function(){
-			iNow = iNow + 1;
-			tab();
+			if(!isRun){
+				iNow = iNow + 1;
+				tab();
+			}
 		})
 
 
 		function tab(){
+			isRun = true;
 			aBtns.attr("class", "");
 			aLi.attr("style", "opacity: 0.5;");
 			if(iNow == aBtns.size()){
@@ -47,6 +52,7 @@ define(["jquery"], function($){
 					oUl.css("left", 0);
 					iNow = 0; //重置
 				}
+				isRun = false;
 			})
 		}
 

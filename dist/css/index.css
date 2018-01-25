@@ -144,8 +144,7 @@
 
 .mid {
   height: 110px;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   .mid .logo {
     float: left;
     display: block; }
@@ -226,6 +225,26 @@
           top: 2px; }
         .mid .cart dl dt span {
           color: #d00000; }
+      .mid .cart dl dd {
+        width: 268px;
+        padding: 10px 10px 20px 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        background: #fff;
+        display: none;
+        z-index: 999;
+        position: absolute;
+        top: 34px; }
+      .mid .cart dl b {
+        width: 94px;
+        height: 3px;
+        display: none;
+        position: absolute;
+        background: #fff;
+        right: 1px;
+        top: 32px;
+        z-index: 9999; }
   .mid a {
     display: block; }
     .mid a .overseaenter {
@@ -248,7 +267,7 @@
       width: 1210px;
       margin: 0 auto;
       position: relative; }
-      .navbg .nav .menu li {
+      .navbg .nav .menu .menu_item {
         display: inline-block;
         float: left;
         z-index: 20;
@@ -257,14 +276,14 @@
         font-family: "微软雅黑";
         height: 40px;
         line-height: 40px; }
-        .navbg .nav .menu li a {
+        .navbg .nav .menu .menu_item .shopb {
           display: block;
           width: 82px;
           height: 38px;
           color: #c8a985; }
-          .navbg .nav .menu li a:hover {
+          .navbg .nav .menu .menu_item .shopb:hover {
             color: #fff; }
-        .navbg .nav .menu li:nth-of-type(1) a {
+        .navbg .nav .menu .menu_item:nth-of-type(1) .shopa {
           width: 130px;
           background: url(../images/icon/share03.png) -8px -215px no-repeat;
           font-size: 14px;
@@ -272,7 +291,96 @@
           height: 38px;
           color: #fff;
           display: inline-block; }
-        .navbg .nav .menu li:nth-of-type(11) i {
+        .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu {
+          width: 130px;
+          display: none;
+          min-height: 585px;
+          position: relative;
+          z-index: 1000;
+          vertical-align: top; }
+          .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li {
+            vertical-align: top;
+            position: relative;
+            width: 130px;
+            z-index: 1000; }
+            .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group {
+              background-color: #fff;
+              opacity: 0.85;
+              height: 36px;
+              text-align: left;
+              line-height: 36px;
+              margin: 0 auto;
+              position: relative;
+              padding-left: 48px; }
+              .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group:hover {
+                opacity: 1; }
+              .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group span {
+                color: #c69c6d; }
+              .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group i {
+                position: absolute;
+                right: 2px;
+                top: 0;
+                height: 36px;
+                width: 20px;
+                display: inline;
+                background: url(../images/icon/share02.png) no-repeat -304px -33px; }
+              .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group .menu_show {
+                display: none;
+                width: 800px;
+                background-color: #ffffff;
+                position: absolute;
+                left: 130px;
+                top: 0px;
+                min-height: 220px; }
+                .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group .menu_show .showshop {
+                  background-color: #ffffff;
+                  min-width: 605px;
+                  max-width: 750px;
+                  border-bottom: #d7d7d7 1px solid;
+                  margin: 10px 0px 10px 20px;
+                  float: left;
+                  clear: both;
+                  overflow: hidden;
+                  line-height: 25px; }
+                  .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group .menu_show .showshop h2 {
+                    float: left;
+                    color: #CF0201;
+                    width: 105px;
+                    font-size: 14px;
+                    font-style: normal;
+                    padding-left: 25px;
+                    text-align: left; }
+                    .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group .menu_show .showshop h2 a {
+                      font-size: 14px;
+                      color: #CF0201; }
+                  .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group .menu_show .showshop .show {
+                    max-width: 500px;
+                    min-height: 25px;
+                    line-height: 25px;
+                    float: left;
+                    display: block; }
+                    .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group .menu_show .showshop .show a {
+                      color: #757272;
+                      font-size: 12px;
+                      float: left;
+                      margin-right: 10px; }
+                .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group .menu_show .showindex {
+                  float: left;
+                  padding-left: 25px;
+                  width: 590px;
+                  height: 70px; }
+                  .navbg .nav .menu .menu_item:nth-of-type(1) .leftmenu ul li .group .menu_show .showindex a {
+                    display: block;
+                    width: 115px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #cf0201;
+                    margin-top: 20px;
+                    float: left;
+                    margin-left: 20px; }
+        .navbg .nav .menu .menu_item:nth-of-type(11) i {
           display: inline-block;
           float: left;
           width: 19px;
@@ -280,7 +388,7 @@
           line-height: 40px;
           background: url(../images/icon/share02.png) no-repeat -58px -169px;
           margin-left: 23px; }
-        .navbg .nav .menu li:nth-of-type(11):hover i {
+        .navbg .nav .menu .menu_item:nth-of-type(11):hover i {
           background-position: -366px -252px; }
     .navbg .nav .icon {
       position: absolute;
@@ -906,62 +1014,186 @@
         width: 275px;
         border: 1px solid #ccc; }
 
-.promotion_box .promotion1, .promotion_box .promotion2 {
-  overflow: hidden;
-  margin-bottom: 10px; }
-  .promotion_box .promotion1 .promotion1pic, .promotion_box .promotion2 .promotion1pic {
-    float: left; }
-    .promotion_box .promotion1 .promotion1pic img, .promotion_box .promotion2 .promotion1pic img {
-      display: block; }
-  .promotion_box .promotion1 .pro1pic1, .promotion_box .promotion2 .pro1pic1 {
-    width: 610px;
-    height: 295px; }
-  .promotion_box .promotion1 .pro1pic2, .promotion_box .promotion2 .pro1pic2 {
-    width: 305px;
-    height: 295px; }
-
-.promotion_box .promotion3 {
-  overflow: hidden; }
-  .promotion_box .promotion3 .proleft {
-    float: left;
+.promotion_box {
+  margin-bottom: 50px; }
+  .promotion_box .promotion1, .promotion_box .promotion2 {
     overflow: hidden;
-    width: 610px; }
-    .promotion_box .promotion3 .proleft .proleftpic {
+    margin-bottom: 10px; }
+    .promotion_box .promotion1 .promotion1pic, .promotion_box .promotion2 .promotion1pic {
+      float: left; }
+      .promotion_box .promotion1 .promotion1pic img, .promotion_box .promotion2 .promotion1pic img {
+        display: block; }
+    .promotion_box .promotion1 .pro1pic1, .promotion_box .promotion2 .pro1pic1 {
+      width: 610px;
+      height: 295px; }
+    .promotion_box .promotion1 .pro1pic2, .promotion_box .promotion2 .pro1pic2 {
+      width: 305px;
+      height: 295px; }
+  .promotion_box .promotion3 {
+    overflow: hidden; }
+    .promotion_box .promotion3 .proleft {
       float: left;
-      width: 203px;
-      height: 73px; }
-      .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox {
-        width: 192px;
-        height: 63px;
-        border: 1px solid #ccc;
-        position: relative; }
-        .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox img {
-          display: block; }
-        .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox .topline {
-          position: absolute;
-          top: -1px;
-          left: -1px;
-          width: 0;
-          height: 1px;
-          background: #000; }
-        .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox .rightline {
-          position: absolute;
-          bottom: 0;
-          right: -1px;
-          width: 1px;
-          height: 0;
-          background: #000; }
-        .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox .bottomline {
-          position: absolute;
-          bottom: -1px;
-          right: 0;
-          width: 0;
-          height: 1px;
-          background: #000; }
-        .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox .leftline {
-          position: absolute;
-          left: -1px;
-          top: -1px;
-          width: 1px;
-          height: 0;
-          background: #000; }
+      overflow: hidden;
+      width: 610px; }
+      .promotion_box .promotion3 .proleft .proleftpic {
+        float: left;
+        width: 203px;
+        height: 73px; }
+        .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox {
+          width: 192px;
+          height: 63px;
+          border: 1px solid #ccc;
+          position: relative; }
+          .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox img {
+            display: block; }
+          .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox .topline {
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            width: 0;
+            height: 1px;
+            background: #000; }
+          .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox .rightline {
+            position: absolute;
+            bottom: 0;
+            right: -1px;
+            width: 1px;
+            height: 0;
+            background: #000; }
+          .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox .bottomline {
+            position: absolute;
+            bottom: -1px;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background: #000; }
+          .promotion_box .promotion3 .proleft .proleftpic .proleftpicbox .leftline {
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            width: 1px;
+            height: 0;
+            background: #000; }
+
+.popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 18;
+  height: 120px;
+  width: 100%; }
+  .popup .popup_bg {
+    height: 120px;
+    background: url(../images/148282825934_2x120.png) repeat-x center top; }
+    .popup .popup_bg .popup_main {
+      width: 1210px;
+      height: 120px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -605px; }
+      .popup .popup_bg .popup_main img {
+        width: 1210px;
+        height: 120px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -605px; }
+      .popup .popup_bg .popup_main .popup_close {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        height: 47px;
+        width: 70px;
+        cursor: pointer; }
+
+.right_menu {
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  right: 0;
+  width: 37px; }
+  .right_menu ul {
+    width: 35px;
+    height: 147px;
+    position: absolute;
+    top: 200px;
+    right: 0px; }
+    .right_menu ul li {
+      background-color: #333;
+      margin-bottom: 1px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      cursor: pointer;
+      display: block;
+      width: 35px;
+      height: 35px;
+      position: relative;
+      padding-bottom: 1px; }
+      .right_menu ul li:hover .menu_text {
+        display: block; }
+      .right_menu ul li .menu_text {
+        position: absolute;
+        z-index: 999999;
+        right: 35px;
+        top: 0;
+        width: 99px;
+        height: 33px;
+        line-height: 33px;
+        text-align: center;
+        color: #363636;
+        background-color: #fff;
+        border: 1px solid #e4e4e4;
+        border-right: none;
+        font-size: 14px;
+        display: none; }
+      .right_menu ul li .menu_square {
+        position: absolute;
+        z-index: -1;
+        line-height: 12px;
+        text-align: center;
+        font-size: 30px;
+        top: 10px;
+        right: -8px;
+        color: #fff; }
+      .right_menu ul li:nth-of-type(1) {
+        background: url(../images/icon/share02.png) no-repeat -88px -156px #333; }
+        .right_menu ul li:nth-of-type(1):hover {
+          background: url(../images/icon/share02.png) no-repeat -88px -121px #C59B6D; }
+      .right_menu ul li:nth-of-type(2) {
+        background: url(../images/icon/share02.png) no-repeat -140px -154px #333; }
+        .right_menu ul li:nth-of-type(2):hover {
+          background: url(../images/icon/share02.png) no-repeat -141px -124px #C59B6D; }
+      .right_menu ul li:nth-of-type(3) {
+        background: url(../images/icon/share02.png) no-repeat -202px -155px #333; }
+        .right_menu ul li:nth-of-type(3):hover {
+          background: url(../images/icon/share02.png) no-repeat -203px -126px #C59B6D; }
+      .right_menu ul li:nth-of-type(4) {
+        background: url(../images/icon/share02.png) no-repeat -258px -125px #333; }
+        .right_menu ul li:nth-of-type(4):hover {
+          background: url(../images/icon/share02.png) no-repeat -258px -125px #C59B6D; }
+    .right_menu ul:nth-of-type(2) {
+      top: 495px; }
+      .right_menu ul:nth-of-type(2) li:nth-of-type(1) {
+        background: url(../images/icon/share02.png) no-repeat -312px -155px #333; }
+        .right_menu ul:nth-of-type(2) li:nth-of-type(1):hover {
+          background: url(../images/icon/share02.png) no-repeat -312px -123px #C59B6D; }
+        .right_menu ul:nth-of-type(2) li:nth-of-type(1) .menu_text {
+          width: 122px;
+          height: 136px; }
+      .right_menu ul:nth-of-type(2) li:nth-of-type(2) {
+        background: url(../images/icon/share02.png) no-repeat -374px -157px #333; }
+        .right_menu ul:nth-of-type(2) li:nth-of-type(2):hover {
+          background: url(../images/icon/share02.png) no-repeat -375px -125px #C59B6D; }
+      .right_menu ul:nth-of-type(2) li:nth-of-type(3) {
+        background: url(../images/icon/line_bg.png) no-repeat 10px 9px #333; }
+        .right_menu ul:nth-of-type(2) li:nth-of-type(3):hover {
+          background: url(../images/icon/line_bg.png) no-repeat 10px -19px #C59B6D; }
+      .right_menu ul:nth-of-type(2) li:nth-of-type(4) {
+        background: url(../images/icon/share02.png) no-repeat -437px -153px #333; }
+        .right_menu ul:nth-of-type(2) li:nth-of-type(4):hover {
+          background: url(../images/icon/share02.png) no-repeat -436px -124px #C59B6D; }
+        .right_menu ul:nth-of-type(2) li:nth-of-type(4) a {
+          display: block;
+          width: 35px;
+          height: 35px; }

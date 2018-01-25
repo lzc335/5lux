@@ -3,15 +3,17 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>第五大道奢侈品网-中国首家奢侈品O2O网购平台，新款同步，门店提货</title>
-		<link rel="shortcut icon" type="image/x-icon" href="images/5lux-icon.ico" />
+		<link rel="shortcuticon" type="image/x-icon" href="images/5lux-icon.ico" />
 		<link rel="stylesheet" href="css/base.min.css" />
 		<link rel="stylesheet" href="css/index.min.css" />
+		<link rel="stylesheet" href="css/foot.min.css" />
 		<script type = "text/javascript" src = "js/require.js" async = "true" defer data-main = "js/main_index"></script>
 	</head>
 	<body>
 		
 		<!--top-->
 		<div class="topbg">
+			<a name="head"></a>
 			<div class="top">
 				<ul class="left">
 					<li><a href="#">第五大道首页</a><i></i></li>
@@ -79,15 +81,9 @@
 						<img src="images/cart.png" alt="" />
 						（<span id="cart_number">0</span>）
 					</dt>
-					<!--<dd>
-						<ul>
-							<li>
-								<p>
-									购物袋暂时没有商品，<br />赶紧选择心爱的商品吧！
-								</p>
-							</li>
-						</ul>
-					</dd>-->
+					<dd>
+						购物袋暂时没有商品，<br/>赶紧选择心爱的商品吧！
+					</dd>
 					<b></b>
 				</dl>
 			</div>
@@ -100,17 +96,76 @@
 		<div class="navbg">
 			<div class="nav">
 				<ul class="menu">
-					<li><a href="#">商品分类</a></li>
-					<li><a href="#">品牌</a></li>
-					<li><a href="#">最新</a></li>
-					<li><a href="#">女士</a></li>
-					<li><a href="#">男士</a></li>
-					<li><a href="#">生活馆</a></li>
-					<li><a href="#">海外馆</a></li>
-					<li><a href="#">时尚</a></li>
-					<li><a href="#">特惠</a></li>
-					<li><a href="#">礼品区</a></li>
-					<li><a href="#">
+					<li class="menu_item" id="menu_item1">
+						<a href="#" class="shopa">商品分类</a>
+						<!--分类导航-->
+						<div class="leftmenu">
+							<ul>
+								<li>
+									<div class="group">
+										<span>推荐品牌</span>
+										<i></i>
+										<div class="menu_show">
+											<div class="showshop">
+												<h2>
+													<a href="#">国际高端</a>
+												</h2>
+												<div class="show">
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+												</div>
+											</div>
+											<div class="showshop">
+												<h2>
+													<a href="#">国际高端</a>
+												</h2>
+												<div class="show">
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+												</div>
+											</div>
+											<div class="showshop">
+												<h2>
+													<a href="#">国际高端</a>
+												</h2>
+												<div class="show">
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+													<a href="#">Louis Vuitton/LV</a>
+												</div>
+											</div>
+											<div class="showindex">
+												<a href="#">进入所有品牌</a>
+											</div>
+										</div>
+									</div>
+									
+								</li>
+								
+							</ul>
+						</div>
+					</li>
+					<li class="menu_item"><a href="#" class="shopb">品牌</a></li>
+					<li class="menu_item"><a href="#" class="shopb">最新</a></li>
+					<li class="menu_item"><a href="#" class="shopb">女士</a></li>
+					<li class="menu_item"><a href="#" class="shopb">男士</a></li>
+					<li class="menu_item"><a href="#" class="shopb">生活馆</a></li>
+					<li class="menu_item"><a href="#" class="shopb">海外馆</a></li>
+					<li class="menu_item"><a href="#" class="shopb">时尚</a></li>
+					<li class="menu_item"><a href="#" class="shopb">特惠</a></li>
+					<li class="menu_item"><a href="#" class="shopb">礼品区</a></li>
+					<li class="menu_item"><a href="#" class="shopb">
 						<i></i>到店</a></li>
 				</ul>
 				<ul class="icon">
@@ -479,7 +534,73 @@
 				</a>
 			</div>
 		</div>
-		<div class="goods"></div>
+		<div class="goods">
+			<div class="goods1">
+				<ul class="goodslinks">
+					<li><a href="#">单肩包</a></li>
+					<li><a href="#">手提包</a></li>
+					<li><a href="#">手提斜挎包</a></li>
+					<li><a href="#">双肩包</a></li>
+					<li><a href="#">手拿包</a></li>
+					<li><a href="#">钱包</a></li>
+					<li><a href="#">小皮件</a></li>
+					<li><a href="#">旅行箱/包</a></li>
+					<li><a href="#">斜挎包</a></li>
+					<li><a href="#">化妆箱/包</a></li>
+				</ul>
+				<div class="slider">
+					<div class="bx_wrapper">
+						<div class="bx_viewport">
+							<ul class="sliderbox">
+								<li class="bx_clone">
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li class="bx_clone">
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="bx_controls">
+							<div class="bx_pager">
+								<div class="bx_pager_item"><a class="active"></a></div>
+								<div class="bx_pager_item"><a></a></div>
+								<div class="bx_pager_item"><a></a></div>
+							</div>
+							<div class="bx_controls_direction">
+								<a class="bx_prev"></a>
+								<a class="bx_next"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="goods2"></div>
+			<div class="goods3"></div>
+		</div>
 	
 		<!--典藏腕表-->
 		<a name="collection_watches"></a>
@@ -492,7 +613,73 @@
 				</a>
 			</div>
 		</div>
-		<div class="goods"></div>
+		<div class="goods">
+			<div class="goods1">
+				<ul class="goodslinks">
+					<li><a href="#">单肩包</a></li>
+					<li><a href="#">手提包</a></li>
+					<li><a href="#">手提斜挎包</a></li>
+					<li><a href="#">双肩包</a></li>
+					<li><a href="#">手拿包</a></li>
+					<li><a href="#">钱包</a></li>
+					<li><a href="#">小皮件</a></li>
+					<li><a href="#">旅行箱/包</a></li>
+					<li><a href="#">斜挎包</a></li>
+					<li><a href="#">化妆箱/包</a></li>
+				</ul>
+				<div class="slider">
+					<div class="bx_wrapper">
+						<div class="bx_viewport">
+							<ul class="sliderbox">
+								<li class="bx_clone">
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li class="bx_clone">
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="bx_controls">
+							<div class="bx_pager">
+								<div class="bx_pager_item"><a class="active"></a></div>
+								<div class="bx_pager_item"><a></a></div>
+								<div class="bx_pager_item"><a></a></div>
+							</div>
+							<div class="bx_controls_direction">
+								<a class="bx_prev"></a>
+								<a class="bx_next"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="goods2"></div>
+			<div class="goods3"></div>
+		</div>
 		
 		<!--精致配饰-->
 		<a name="exquisite_accessories"></a>
@@ -505,7 +692,73 @@
 				</a>
 			</div>
 		</div>
-		<div class="goods"></div>
+		<div class="goods">
+			<div class="goods1">
+				<ul class="goodslinks">
+					<li><a href="#">单肩包</a></li>
+					<li><a href="#">手提包</a></li>
+					<li><a href="#">手提斜挎包</a></li>
+					<li><a href="#">双肩包</a></li>
+					<li><a href="#">手拿包</a></li>
+					<li><a href="#">钱包</a></li>
+					<li><a href="#">小皮件</a></li>
+					<li><a href="#">旅行箱/包</a></li>
+					<li><a href="#">斜挎包</a></li>
+					<li><a href="#">化妆箱/包</a></li>
+				</ul>
+				<div class="slider">
+					<div class="bx_wrapper">
+						<div class="bx_viewport">
+							<ul class="sliderbox">
+								<li class="bx_clone">
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li class="bx_clone">
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="bx_controls">
+							<div class="bx_pager">
+								<div class="bx_pager_item"><a class="active"></a></div>
+								<div class="bx_pager_item"><a></a></div>
+								<div class="bx_pager_item"><a></a></div>
+							</div>
+							<div class="bx_controls_direction">
+								<a class="bx_prev"></a>
+								<a class="bx_next"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="goods2"></div>
+			<div class="goods3"></div>
+		</div>
 		
 		<!--个护化妆-->
 		<a name="nurse_makeup"></a>
@@ -518,7 +771,73 @@
 				</a>
 			</div>
 		</div>
-		<div class="goods"></div>
+		<div class="goods">
+			<div class="goods1">
+				<ul class="goodslinks">
+					<li><a href="#">单肩包</a></li>
+					<li><a href="#">手提包</a></li>
+					<li><a href="#">手提斜挎包</a></li>
+					<li><a href="#">双肩包</a></li>
+					<li><a href="#">手拿包</a></li>
+					<li><a href="#">钱包</a></li>
+					<li><a href="#">小皮件</a></li>
+					<li><a href="#">旅行箱/包</a></li>
+					<li><a href="#">斜挎包</a></li>
+					<li><a href="#">化妆箱/包</a></li>
+				</ul>
+				<div class="slider">
+					<div class="bx_wrapper">
+						<div class="bx_viewport">
+							<ul class="sliderbox">
+								<li class="bx_clone">
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li class="bx_clone">
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="bx_controls">
+							<div class="bx_pager">
+								<div class="bx_pager_item"><a class="active"></a></div>
+								<div class="bx_pager_item"><a></a></div>
+								<div class="bx_pager_item"><a></a></div>
+							</div>
+							<div class="bx_controls_direction">
+								<a class="bx_prev"></a>
+								<a class="bx_next"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="goods2"></div>
+			<div class="goods3"></div>
+		</div>
 		
 		<!--时尚鞋服-->
 		<a name="shoes_apparel"></a>
@@ -531,12 +850,235 @@
 				</a>
 			</div>
 		</div>
-		<div class="goods"></div>
+		<div class="goods">
+			<div class="goods1">
+				<ul class="goodslinks">
+					<li><a href="#">单肩包</a></li>
+					<li><a href="#">手提包</a></li>
+					<li><a href="#">手提斜挎包</a></li>
+					<li><a href="#">双肩包</a></li>
+					<li><a href="#">手拿包</a></li>
+					<li><a href="#">钱包</a></li>
+					<li><a href="#">小皮件</a></li>
+					<li><a href="#">旅行箱/包</a></li>
+					<li><a href="#">斜挎包</a></li>
+					<li><a href="#">化妆箱/包</a></li>
+				</ul>
+				<div class="slider">
+					<div class="bx_wrapper">
+						<div class="bx_viewport">
+							<ul class="sliderbox">
+								<li class="bx_clone">
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li>
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+								<li class="bx_clone">
+									<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
+									<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
+									<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
+									<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="bx_controls">
+							<div class="bx_pager">
+								<div class="bx_pager_item"><a class="active"></a></div>
+								<div class="bx_pager_item"><a></a></div>
+								<div class="bx_pager_item"><a></a></div>
+							</div>
+							<div class="bx_controls_direction">
+								<a class="bx_prev"></a>
+								<a class="bx_next"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="goods2"></div>
+			<div class="goods3"></div>
+		</div>
 		
 		<!--promotion_title-->
 		<div class="promotion_title"><img src="images/promotion_title.jpg" alt="" /></div>
 		
 		<!--promotion_box-->
 		<div class="promotion_box"></div>
+		
+		<!--foot-->
+		<div class="footbg">
+			<div class="foot">
+				<div class="foot_top">
+					<ul>
+						<li>
+							<a href="#"><img src="images/icon/footer_message01.jpg" alt="" /></a>
+							<div class="foot_top_text">
+								<p>正品保障</p>
+								<p><a href="#">品牌授权，官方验真</a></p>
+							</div>
+						</li>
+						<li>
+							<a href="#"><img src="images/icon/footer_message02.jpg" alt="" /></a>
+							<div class="foot_top_text">
+								<p>专柜发货</p>
+								<p><a href="#">专柜直接或到店自提</a></p>
+							</div>
+						</li>
+						<li>
+							<a href="#"><img src="images/icon/footer_message03.jpg" alt="" /></a>
+							<div class="foot_top_text">
+								<p>无忧售后</p>
+								<p><a href="#">7天无理由退换货</a></p>
+							</div>
+						</li>
+						<li>
+							<a href="#"><img src="images/icon/footer_message04.jpg" alt="" /></a>
+							<div class="foot_top_text">
+								<p>VIP服务</p>
+								<p><a href="#">享品牌会员售前售后服务</a></p>
+							</div>
+						</li>
+						<li>
+							<a href="#"><img src="images/icon/footer_message05.jpg" alt="" /></a>
+							<div class="foot_top_text">
+								<p>权威荣誉</p>
+								<p><a href="#">商务部授予诚信示范企业</a></p>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="foot_ctr">
+					<div class="foot_ctrbox">
+						<ul>
+							<li>
+								<span class="sp01">服务保障</span>
+								<span><a href="#">品牌授权正品</a></span>
+								<span><a href="#">品牌客服</a></span>
+								<span><a href="#">预约到店体验</a></span>
+								<span><a href="#">7天无理由替换</a></span>
+							</li>
+							<li>
+								<span class="sp01">使用帮助</span>
+								<span><a href="#">常见问题</a></span>
+								<span><a href="#">会员制度</a></span>
+								<span><a href="#">集团采购</a></span>
+								<span><a href="#">礼品卡</a></span>
+							</li>
+							<li>
+								<span class="sp01">支付方式</span>
+								<span><a href="#">到店付款</a></span>
+								<span><a href="#">货到付款</a></span>
+								<span><a href="#">在线支付</a></span>
+								<span><a href="#">余额支付</a></span>
+								<span><a href="#">分期付款</a></span>
+							</li>
+							<li>
+								<span class="sp01">配送方式</span>
+								<span><a href="#">配送说明</a></span>
+								<span><a href="#">专柜自提</a></span>
+								<span><a href="#">运费说明</a></span>
+								<span><a href="#">验货签收</a></span>
+							</li>
+							<li>
+								<span class="sp01">售后服务</span>
+								<span><a href="#">品牌售后</a></span>
+								<span><a href="#">售后咨询</a></span>
+								<span><a href="#">退换政策</a></span>
+								<span><a href="#">发票保障</a></span>
+							</li>
+							<li class="foot_app">
+								<span class="sp01">第五大道app</span>
+								<span><img src="images/footer_message06.jpg" alt="" /></span>
+							</li>
+							<li class="foot_weibo">
+								<span class="sp01">第五大道微博</span>
+								<span><img src="images/footer_message07.jpg" alt="" /></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="foot_btm">
+					<div class="foot_btm_t">
+						<a href="#">箱包</a> 丨
+						<a href="#">美妆</a> 丨
+						<a href="#">服饰</a> 丨
+						<a href="#">腕表</a> 丨
+						<a href="#">配饰</a> 丨
+						<a href="#">鞋靴</a> 丨
+						<a href="#">特惠</a> 丨
+						<a href="#">礼品区</a>
+					</div>
+					<div>
+						<a href="#">关于第五大道</a> 丨
+						<a href="#">网站地图</a> 丨
+						<a href="#">品牌合作专区</a> 丨
+						<a href="#">媒体聚焦</a> 丨
+						<a href="#">商务合作</a> 丨
+						<a href="#">商家合作</a> 丨
+						<a href="#">加入第五大道</a> 丨
+						<a href="#">友情链接</a> 丨
+						<a href="#">奢尚志</a> 丨
+						<a href="#">联系我们</a> 丨
+						<a href="#">投诉建议</a>
+						<p>Copyright © 2008-2016 瑞美嘉信国际信息技术（北京）有限公司&nbsp; 版权所有京ICP备09012701号-1 京公网安备110105007400号 食品经营许可证号：
+                    	</p>
+					</div>
+					<div class="foot_btm_b">
+						<a href="#"><img src="images/icon/14567178388519.jpg" alt="" /></a>
+						<a href="#"><img src="images/icon/footer_message10.jpg" alt="" /></a>
+						<a href="#"><img src="images/icon/footer_message11.jpg" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!--cnzz-->
+		<div class="cnzz"><img src="images/icon/pic.gif" alt="" /></div>
+		
+		<!--popup-->
+		<div class="popup">
+			<div class="popup_bg">
+				<div class="popup_main">
+					<img src="images/foot_popup.png" alt="" />
+					<div class="popup_close"></div>
+				</div>
+			</div>
+		</div>
+	
+		<!--right_menu-->
+		<div class="right_menu">
+			<ul>
+				<li></li>
+				<li><div class="menu_text">我的资产<div class="menu_square">◆</div></li>
+				<li><div class="menu_text">我喜欢的商品<div class="menu_square">◆</div></li>
+				<li><div class="menu_text">联系客服<div class="menu_square">◆</div></li>
+			</ul>
+			<ul>
+				<li><div class="menu_text"><img src="images/weixin_img.png"/><div class="menu_square">◆</div></li>
+				<li><div class="menu_text">意见反馈<div class="menu_square">◆</div></li>
+				<li><div class="menu_text">联系我们<div class="menu_square">◆</div></li>
+				<li><a href="#head"><div class="menu_text">返回顶部<div class="menu_square">◆</div></div></a></li>
+			</ul>
+		</div>
 	</body>
 </html>

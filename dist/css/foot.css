@@ -1,0 +1,94 @@
+.footbg {
+  background: url(../images/footer_bg.jpg) center;
+  border-top: 1px solid #c9c9c9; }
+  .footbg .foot {
+    width: 1210px;
+    margin: 0 auto;
+    height: 600px; }
+    .footbg .foot .foot_top {
+      height: 116px;
+      border-bottom: 1px solid #c9c9c9;
+      clear: both; }
+      .footbg .foot .foot_top ul li {
+        width: 242px;
+        height: 64px;
+        float: left;
+        margin-top: 26px; }
+        .footbg .foot .foot_top ul li a {
+          color: #333;
+          font-size: 13px; }
+          .footbg .foot .foot_top ul li a img {
+            width: 64px;
+            height: 64px;
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 5px;
+            cursor: pointer;
+            vertical-align: top;
+            float: left; }
+        .footbg .foot .foot_top ul li .foot_top_text {
+          display: inline-block;
+          float: left;
+          width: 160px;
+          height: 48px;
+          margin-top: 8px; }
+          .footbg .foot .foot_top ul li .foot_top_text p:nth-of-type(1) {
+            font-weight: bold;
+            margin-bottom: 10px; }
+          .footbg .foot .foot_top ul li .foot_top_text p a {
+            color: #333;
+            font-size: 13px;
+            cursor: pointer; }
+            .footbg .foot .foot_top ul li .foot_top_text p a:hover {
+              text-decoration: underline; }
+    .footbg .foot .foot_ctr {
+      height: 283px;
+      clear: both; }
+      .footbg .foot .foot_ctr .foot_ctrbox {
+        float: left; }
+        .footbg .foot .foot_ctr .foot_ctrbox ul {
+          padding-left: 20px; }
+          .footbg .foot .foot_ctr .foot_ctrbox ul li {
+            width: 185px;
+            overflow: hidden;
+            float: left; }
+            .footbg .foot .foot_ctr .foot_ctrbox ul li .sp01 {
+              font-weight: bold;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              color: #000; }
+            .footbg .foot .foot_ctr .foot_ctrbox ul li span {
+              display: block;
+              margin-bottom: 5px; }
+              .footbg .foot .foot_ctr .foot_ctrbox ul li span a {
+                color: #333;
+                font-size: 13px; }
+                .footbg .foot .foot_ctr .foot_ctrbox ul li span a:hover {
+                  text-decoration: underline; }
+          .footbg .foot .foot_ctr .foot_ctrbox ul .foot_app {
+            width: 140px;
+            height: 283px; }
+          .footbg .foot .foot_ctr .foot_ctrbox ul .foot_weibo {
+            width: 125px;
+            height: 283px; }
+    .footbg .foot .foot_btm {
+      text-align: center;
+      color: #fff; }
+      .footbg .foot .foot_btm a {
+        font-size: 13px;
+        color: #fff; }
+        .footbg .foot .foot_btm a:hover {
+          text-decoration: underline; }
+      .footbg .foot .foot_btm .foot_btm_t {
+        line-height: 66px; }
+      .footbg .foot .foot_btm div p {
+        margin-top: 10px; }
+      .footbg .foot .foot_btm .foot_btm_b {
+        margin-top: 23px; }
+        .footbg .foot .foot_btm .foot_btm_b img {
+          width: 108px;
+          height: 40px;
+          vertical-align: top; }
+
+.cnzz img {
+  vertical-align: top; }

@@ -16,6 +16,76 @@ define(["jquery", "jquery-cookie"], function($){
 					$("#banner ul").html(html);
 				}
 			})
+			//获取下拉菜单menuleft数据
+			//下拉菜单
+			$(".nav").on("mouseenter", "#menu_item1", function(){
+				$(".leftmenu").attr("style", "display: block;");
+			}).on("mouseleave", "#menu_item1", function(){
+				$(".leftmenu").attr("style", "display: none;");
+			})
+			$(".leftmenu").on("mouseenter", ".group", function(){
+				$(this).find(".menu_show").attr("style", "display: block;");
+			}).on("mouseleave", ".group", function(){
+				$(this).find(".menu_show").attr("style", "display: none;");
+			})
+			
+			//获取nav中的数据
+			$.ajax({
+				url: "../data/nav.json",
+				type: "GET",
+				success: function(res){
+					var html = "";
+					for(var i = 0; i < res.length; i++){
+						html += `<li>
+									<div class="group">
+										<span>${res[i].group}</span>
+										<i></i>
+										<div class="menu_show">
+											<div class="showshop">
+												<h2>
+													<a href="#">${res[i].name}</a>
+												</h2>
+												<div class="show">
+													<a href="#">${res[i].show}</a>
+													<a href="#">${res[i].show}</a>
+													<a href="#">${res[i].show}</a>
+													<a href="#">${res[i].show}</a>
+													<a href="#">${res[i].show}</a>
+													<a href="#">${res[i].show}</a>
+												</div>
+											</div>
+											<div class="showshop">
+												<h2>
+													<a href="#">${res[i].name}</a>
+												</h2>
+												<div class="show">
+													<a href="#">${res[i].show}</a>
+													<a href="#">${res[i].show}</a>
+													<a href="#">${res[i].show}</a>
+												</div>
+											</div>
+											<div class="showshop">
+												<h2>
+													<a href="#">${res[i].name}</a>
+												</h2>
+												<div class="show">
+													<a href="#">${res[i].show}</a>
+													<a href="#">${res[i].show}</a>
+													<a href="#">${res[i].show}</a>
+													<a href="#">${res[i].show}</a>
+												</div>
+											</div>
+											<div class="showindex">
+												<a href="#">进入所有品牌</a>
+											</div>
+										</div>
+									</div>
+								</li>`;
+					}
+					$(".leftmenu").find("ul").html(html);
+				}
+			})
+			
 			
 			//获取brandship_list中的数据
 			$.ajax({
@@ -25,18 +95,18 @@ define(["jquery", "jquery-cookie"], function($){
 					var html = "";
 					for(var i = 0; i < res.length; i++){
 						html += `<li>
-											<a href="#">
-												<img src="${res[i].img.show}" alt="" />
-												<div>
-													<div class="brand_hider">
-														<img src="${res[i].img.brand}" alt="" />
-														<p><span></span></p>
-														<p>${res[i].name.English}</p>
-														<p>${res[i].name.Chinese}</p>
-													</div>
-												</div>
-											</a>
-										</li>`;
+									<a href="#">
+										<img src="${res[i].img.show}" alt="" />
+										<div>
+											<div class="brand_hider">
+												<img src="${res[i].img.brand}" alt="" />
+												<p><span></span></p>
+												<p>${res[i].name.English}</p>
+												<p>${res[i].name.Chinese}</p>
+											</div>
+										</div>
+									</a>
+								</li>`;
 					}
 					$(".brandship_list").html(html);
 				}
@@ -47,6 +117,16 @@ define(["jquery", "jquery-cookie"], function($){
 			})
 			$(".brandship_list").on("mouseleave", "li", function(){
 				$(this).find(".brand_hider").stop().animate({top: 100}, 200);
+			})
+			
+			//购物车出现消失
+			$(".mid").find(".cart").on("mouseenter", "dt", function(){
+				$(".cart").find("dd").attr("style", "display: block;");
+				$(".cart").find("b").attr("style", "display: block;");
+			})
+			$(".mid").find(".cart").on("mouseleave", "dt", function(){
+				$(".cart").find("dd").attr("style", "display: none;");
+				$(".cart").find("b").attr("style", "display: none;");
 			})
 			
 			//获取hotstore数据
@@ -312,97 +392,33 @@ define(["jquery", "jquery-cookie"], function($){
 				type: "GET",
 				success: function(res){
 					var html = "";
-					var htmlFirst = "";
+					var goods2 = "";
+					var goods3 = "";
 					for(var i = 0; i < res.length; i++){
-						html = `<div class="goods1">
-									<ul class="goodslinks">
-										<li><a href="#">单肩包</a></li>
-										<li><a href="#">手提包</a></li>
-										<li><a href="#">手提斜挎包</a></li>
-										<li><a href="#">双肩包</a></li>
-										<li><a href="#">手拿包</a></li>
-										<li><a href="#">钱包</a></li>
-										<li><a href="#">小皮件</a></li>
-										<li><a href="#">旅行箱/包</a></li>
-										<li><a href="#">斜挎包</a></li>
-										<li><a href="#">化妆箱/包</a></li>
-									</ul>
-									<div class="slider">
-										<div class="bx_wrapper">
-											<div class="bx_viewport">
-												<ul class="sliderbox">
-													<li class="bx_clone">
-														<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
-														<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
-														<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
-														<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
-													</li>
-													<li>
-														<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
-														<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
-														<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
-														<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
-													</li>
-													<li>
-														<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
-														<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
-														<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
-														<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
-													</li>
-													<li>
-														<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
-														<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
-														<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
-														<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
-													</li>
-													<li class="bx_clone">
-														<a href="#"><img src="images/brand/14477406185992.png" alt="" /></a>
-														<a href="#"><img src="images/brand/149482910148_214x108.jpg" alt="" /></a>
-														<a href="#"><img src="images/brand/14477378665957.png" alt="" /></a>
-														<a href="#"><img src="images/brand/14477318724845.png" alt="" /></a>
-													</li>
-												</ul>
-											</div>
-											<div class="bx_controls">
-												<div class="bx_pager">
-													<div class="bx_pager_item"><a class="active"></a></div>
-													<div class="bx_pager_item"><a></a></div>
-													<div class="bx_pager_item"><a></a></div>
-												</div>
-												<div class="bx_controls_direction">
-													<a class="bx_prev"></a>
-													<a class="bx_next"></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="goods2">
-									<a href="#"><img src="${res[i].showimg}" alt="" /></a>
-									<div class="goods2_label">
-										<dl>
-											<dd>${res[i].name}</dd>
-											<dd><b></b></dd>
-											<dd>${res[i].desc1}</dd>
-											<dt>${res[i].desc2}</dt>
-										</dl>
-									</div>
-								</div>
-								<div class="goods3">
-									<div class="goods3pic">
-										<a href=""><img src="${res[i].img}" alt="" /></a>
-									</div>
-									<div class="goods3pic">
-										<a href=""><img src="${res[i].img}" alt="" /></a>
-									</div>
-									<div class="goods3pic">
-										<a href=""><img src="${res[i].img}" alt="" /></a>
-									</div>
-									<div class="goods3pic">
-										<a href=""><img src="${res[i].img}" alt="" /></a>
-									</div>
+						goods2 = `<a href="#"><img src="${res[i].showimg}" alt="" /></a>
+								<div class="goods2_label">
+									<dl>
+										<dd>${res[i].name}</dd>
+										<dd><b></b></dd>
+										<dd>${res[i].desc1}</dd>
+										<dt>${res[i].desc2}</dt>
+									</dl>
 								</div>`;
-						$(".goods").eq(i).html(html);
+								
+						goods3 = `<div class="goods3pic">
+									<a href=""><img src="${res[i].img}" alt="" /></a>
+								</div>
+								<div class="goods3pic">
+									<a href=""><img src="${res[i].img}" alt="" /></a>
+								</div>
+								<div class="goods3pic">
+									<a href=""><img src="${res[i].img}" alt="" /></a>
+								</div>
+								<div class="goods3pic">
+									<a href=""><img src="${res[i].img}" alt="" /></a>
+								</div>`;
+						$(".goods").eq(i).find(".goods2").html(goods2);
+						$(".goods").eq(i).find(".goods3").html(goods3);
 					}
 				}
 			})
@@ -513,6 +529,10 @@ define(["jquery", "jquery-cookie"], function($){
 				$(this).find(".leftline").stop().animate({height: 0}, 200);
 			})
 			
+			//关闭popup弹窗
+			$(".popup_close").click(".popup_close", function(){
+				$(".popup").remove();
+			})
 			
 		})
 		return "index.js载入成功";

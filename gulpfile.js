@@ -37,6 +37,15 @@ gulp.task("scss-base", () => {
 	.pipe(gulp.dest("dist/css"))
 	.pipe(connect.reload());
 })
+gulp.task("scss-foot", () => {
+	return gulp.src("scss/foot.scss")
+	.pipe(scss())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(minify())
+	.pipe(rename("foot.min.css"))
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
 
 //js
 gulp.task("scripts", () => {
@@ -53,7 +62,7 @@ gulp.task("data", () => {
 })
 
 //整理文件
-gulp.task("build", ["copy-html", "images", "scripts", "data", "scss-index", "scss-base"], () => {
+gulp.task("build", ["copy-html", "images", "scripts", "data", "scss-index", "scss-base", "scss-foot"], () => {
 	console.log("编译成功");
 })
 
@@ -65,7 +74,7 @@ gulp.task("watch", () => {
 	gulp.watch("data/*.json", ["data"]);
 	gulp.watch("scss/index.scss", ["scss-index"])
 	gulp.watch("scss/base.scss", ["scss-base"])
-	gulp.watch("scss/slide.scss", ["scss-slide"])
+	gulp.watch("scss/foot.scss", ["scss-foot"])
 })
 
 //服务器
