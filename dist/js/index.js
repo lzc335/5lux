@@ -16,7 +16,7 @@ define(["jquery", "jquery-cookie"], function($){
 					$("#banner ul").html(html);
 				}
 			})
-			//获取下拉菜单menuleft数据
+			
 			//下拉菜单
 			$(".nav").on("mouseenter", "#menu_item1", function(){
 				$(".leftmenu").attr("style", "display: block;");

@@ -13,7 +13,7 @@ require.config({
 	shim: {
 		//设置依赖关系
 		"jquery-cookie": ["jquery"],
-		"parabola": ["jquery"],
+		"index": ["jquery"],
 		"slide_banner": ["jquery"],
 		"slide_goods1": ["jquery"]
 	}
