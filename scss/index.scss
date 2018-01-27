@@ -290,6 +290,31 @@
                 z-index: 999;
                 position: absolute;
                 top: 34px;
+                .cart_goods{
+                    height: 60px;
+                    border-bottom: 1px dashed gray;
+                    vertical-align: middle;
+                    img{
+                        float: left;
+                        margin: 10px;
+                        width: 40px;
+                    }
+                    .cg_right{
+                        display: inline-block;
+                        margin: 10px;
+                        float: right;
+                        p{
+                            margin-top: 5px;
+                        }
+                    }
+                }
+                .cart_foot{
+                    float: right;
+                    margin-top: 10px;
+                    div{
+                        display: inline-block;
+                    }
+                }
             }
             b{
                 width: 94px;

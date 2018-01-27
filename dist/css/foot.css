@@ -90,8 +90,11 @@
           height: 40px;
           vertical-align: top; }
 
-.cnzz img {
-  vertical-align: top; }
+.cnzz {
+  height: 12px;
+  overflow: hidden; }
+  .cnzz img {
+    vertical-align: top; }
 
 .right_menu {
   position: fixed;

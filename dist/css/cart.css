@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.top, .mid, .nav, .brand, .shoplist {
+.top, .mid, .nav {
   width: 1210px;
   margin: 0 auto; }
 
@@ -451,158 +451,91 @@
       background: url(../images/icon/overseaslogo.gif) no-repeat;
       background-size: 100% 100%; }
 
-.mainbg {
-  background: url(../images/brand01.jpg) repeat-y center top #000;
-  padding-top: 16px; }
-  .mainbg .brand .bd_intro {
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background: #fff;
+.main {
+  width: 1190px;
+  margin: 20px auto;
+  padding: 10px 0 0 0;
+  overflow: hidden; }
+  .main .main_step {
+    background: url(../images/cart_step.jpg) no-repeat;
+    width: 700px;
+    height: 47px;
+    float: right;
+    margin: 0px 0px 30px 0px; }
+  .main .clearboth {
+    height: 1px;
+    clear: both;
+    float: none;
+    display: block; }
+  .main .main_tbody {
     position: relative; }
-    .mainbg .brand .bd_intro .bd_l {
-      width: 160px;
-      position: absolute;
-      left: 20px;
-      top: 10px; }
-      .mainbg .brand .bd_intro .bd_l ul li .bdl_img {
-        width: 160px;
-        height: 88px;
+    .main .main_tbody table {
+      text-align: left;
+      border-collapse: collapse;
+      width: 100%; }
+      .main .main_tbody table th {
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        font-weight: normal;
         text-align: center;
-        overflow: hidden;
-        box-shadow: 0px -1px 8px #999, 1px 1px 8px #999, 1px 1px 8px #999, -1px 1px 8px #999; }
-      .mainbg .brand .bd_intro .bd_l ul li .bdl_fg {
-        width: 140px;
-        margin: 0 auto;
-        padding-top: 9px;
-        padding-bottom: 9px;
-        background-color: #7c665d;
-        text-align: center;
-        border-bottom-left-radius: 7px;
-        border-bottom-right-radius: 7px;
-        box-shadow: 0px 3px 5px #000; }
-        .mainbg .brand .bd_intro .bd_l ul li .bdl_fg .bdlf_i {
-          display: none;
-          width: 24px;
-          height: 20px;
-          padding-bottom: 5px;
-          margin: 0 auto;
-          background: url(../images/icon/share01.png) no-repeat -308px -343px; }
-        .mainbg .brand .bd_intro .bd_l ul li .bdl_fg span {
-          line-height: 12px;
-          height: 12px;
-          color: #fff; }
-    .mainbg .brand .bd_intro .bd_r {
-      width: 950px;
-      padding-left: 220px;
-      min-height: 110px; }
-      .mainbg .brand .bd_intro .bd_r .bdr_head dl {
+        background: #ebeaea;
+        padding: 0 20px; }
+        .main .main_tbody table th:nth-of-type(1) {
+          text-align: left;
+          padding-left: 12px; }
+        .main .main_tbody table th:nth-of-type(9) {
+          text-align: left; }
+      .main .main_tbody table td {
+        border-top: #b3b3b3 solid 1px;
+        border-bottom: #b3b3b3 solid 1px;
+        text-align: center; }
+        .main .main_tbody table td img {
+          width: 95px;
+          height: 95px; }
+        .main .main_tbody table td:nth-of-type(3) {
+          width: 200px; }
+        .main .main_tbody table td:nth-of-type(9) p {
+          display: block;
+          color: #0000ff;
+          cursor: pointer; }
+    .main .main_tbody .btn_price_info {
+      width: 100%;
+      overflow: hidden;
+      zoom: 1;
+      padding-top: 35px;
+      display: inline-block; }
+      .main .main_tbody .btn_price_info .btn_price_area {
         display: inline-block;
-        line-height: 35px;
         float: right; }
-        .mainbg .brand .bd_intro .bd_r .bdr_head dl:nth-of-type(1) {
-          float: left; }
-        .mainbg .brand .bd_intro .bd_r .bdr_head dl:nth-of-type(2) span {
-          color: #d00000;
-          cursor: pointer; }
-        .mainbg .brand .bd_intro .bd_r .bdr_head dl:nth-of-type(3) span {
-          padding: 2px 13px;
-          border: 1px solid #bfa79d;
-          border-radius: 5px;
-          color: #3f2b2a;
-          cursor: pointer; }
-        .mainbg .brand .bd_intro .bd_r .bdr_head dl:nth-of-type(4) {
-          display: inline-block;
+        .main .main_tbody .btn_price_info .btn_price_area p {
           line-height: 35px;
+          height: 35px;
           float: right;
-          cursor: pointer; }
-          .mainbg .brand .bd_intro .bd_r .bdr_head dl:nth-of-type(4) dt {
-            width: 25px;
-            height: 35px;
-            display: inline-block;
-            float: left;
-            background: url(../images/icon/share01.png) no-repeat -68px -334px; }
-            .mainbg .brand .bd_intro .bd_r .bdr_head dl:nth-of-type(4) dt dd {
-              float: left;
-              line-height: 35px;
-              padding-left: 7px;
-              color: #666;
-              padding-right: 22px; }
-          .mainbg .brand .bd_intro .bd_r .bdr_head dl:nth-of-type(4) span {
-            padding: 2px 13px;
-            border: 1px solid #bfa79d;
-            border-radius: 5px;
-            color: #3f2b2a;
-            cursor: pointer; }
-        .mainbg .brand .bd_intro .bd_r .bdr_head dl dd {
-          float: left;
-          line-height: 35px;
-          padding-left: 7px;
           color: #666;
-          padding-right: 22px; }
-      .mainbg .brand .bd_intro .bd_r .clearboth {
-        clear: both;
-        float: none;
-        display: block;
-        width: 100%;
-        height: 1px; }
-      .mainbg .brand .bd_intro .bd_r .bdr_body {
-        padding-top: 5px;
-        color: #999;
-        padding-left: 7px;
-        padding-right: 20px;
-        padding-bottom: 5px; }
-  .mainbg .shoplist {
-    margin-top: 16px; }
-    .mainbg .shoplist dl {
-      display: block;
-      overflow: hidden; }
-      .mainbg .shoplist dl dd {
-        float: left;
-        margin-right: 16px;
-        display: block; }
-        .mainbg .shoplist dl dd:nth-of-type(4n) {
-          margin-right: 0; }
-        .mainbg .shoplist dl dd .pitem {
-          float: left;
-          padding-bottom: 20px; }
-          .mainbg .shoplist dl dd .pitem .inbox {
-            padding: 10px;
-            width: 270px;
-            margin: 0 auto;
-            background: #fff;
-            min-height: 350px;
-            position: relative;
-            overflow: auto; }
-            .mainbg .shoplist dl dd .pitem .inbox ul {
-              display: block;
-              width: 270px;
-              background: #fff;
-              height: auto;
-              padding-bottom: 20px; }
-              .mainbg .shoplist dl dd .pitem .inbox ul li {
-                text-align: center; }
-                .mainbg .shoplist dl dd .pitem .inbox ul li:nth-of-type(1) {
-                  display: block;
-                  max-width: 267px;
-                  height: 267px;
-                  overflow: hidden;
-                  margin: 0 auto; }
-                  .mainbg .shoplist dl dd .pitem .inbox ul li:nth-of-type(1) img {
-                    max-width: 267px;
-                    height: 267px; }
-                .mainbg .shoplist dl dd .pitem .inbox ul li:nth-of-type(2) {
-                  font-size: 12px;
-                  color: #666;
-                  margin-top: 25px; }
-                .mainbg .shoplist dl dd .pitem .inbox ul li:nth-of-type(3) {
-                  font-weight: 500;
-                  overflow: hidden;
-                  display: -webkit-box;
-                  -webkit-line-clamp: 2;
-                  -webkit-box-orient: vertical;
-                  word-break: break-all;
-                  max-height: 50px; }
-                .mainbg .shoplist dl dd .pitem .inbox ul li:nth-of-type(3) {
-                  color: #c2a67d;
-                  margin-bottom: 10px; }
+          text-align: right; }
+          .main .main_tbody .btn_price_info .btn_price_area p span {
+            margin-right: 15px; }
+          .main .main_tbody .btn_price_info .btn_price_area p strong {
+            margin-right: 15px;
+            font-size: 20px;
+            color: #d73128; }
+          .main .main_tbody .btn_price_info .btn_price_area p a {
+            margin-right: 0;
+            float: right; }
+            .main .main_tbody .btn_price_info .btn_price_area p a span {
+              display: inline-block;
+              height: 35px;
+              line-height: 35px;
+              vertical-align: baseline;
+              color: white;
+              font-family: 微软雅黑;
+              font-size: 14px;
+              cursor: pointer;
+              padding: 0px 40px;
+              border-width: 0px;
+              border-style: initial;
+              border-color: initial;
+              border-image: initial;
+              overflow: hidden;
+              background-color: #d31920; }

@@ -236,6 +236,25 @@
         z-index: 999;
         position: absolute;
         top: 34px; }
+        .mid .cart dl dd .cart_goods {
+          height: 60px;
+          border-bottom: 1px dashed gray;
+          vertical-align: middle; }
+          .mid .cart dl dd .cart_goods img {
+            float: left;
+            margin: 10px;
+            width: 40px; }
+          .mid .cart dl dd .cart_goods .cg_right {
+            display: inline-block;
+            margin: 10px;
+            float: right; }
+            .mid .cart dl dd .cart_goods .cg_right p {
+              margin-top: 5px; }
+        .mid .cart dl dd .cart_foot {
+          float: right;
+          margin-top: 10px; }
+          .mid .cart dl dd .cart_foot div {
+            display: inline-block; }
       .mid .cart dl b {
         width: 94px;
         height: 3px;

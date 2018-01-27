@@ -60,32 +60,37 @@ define(["jquery", "jquery-cookie"], function($){
 					}
 				})
 			}
-			//加载商品列表数据
+			
+			//加载页面上的数据
 			$.ajax({
 				url: "../data/goodslist.json",
-				type: "GET",
+				type: "get",
 				success: function(res){
-					var html = "";
-					for(var i = 0; i < res.length; i++){
-						html += `<dd>
-									<div class="pitem">
-										<div class="inbox">
-											<ul>
-												<li>
-													<a href="detail.html"><img src="${res[i].img}" alt="" /></a>
-												</li>
-												<li><a href="detail.html"></a></li>
-												<li>
-													<a href="detail.html">${res[i].title}</a>
-												</li>
-												<li>${"￥" + res[i].price}</li>
-											</ul>
-											<p class="classic"></p>
-										</div>
-									</div>
-								</dd>`;
+					//a:找出所有cookie数据
+
+					if(!$.cookie("goods")){
+						//要将购物车内的商品清空
+						$(".main_tbody_ajax").html("购物袋暂时没有商品，<br/>赶紧选择心爱的商品吧！");
+						return;
 					}
-					$(".shoplist dl").html(html);
+
+					var arr = eval($.cookie("goods"));
+					var html = '';
+					var sum = 0;
+					for(var i = 0; i < arr.length; i++){
+						//用id当做下标取出数据${res[arr[i].id].img}
+						html += `<td><input type="checkbox" checked="checked"/></td>
+								<td><img src="${res[arr[i].id].img}" alt="" /></td>
+								<td>${res[arr[i].id].title}</td>
+								<td>${res[arr[i].id].color}</td>
+								<td>￥${res[arr[i].id].price}</td>
+								<td>${arr[i].num}</td>
+								<td></td>
+								<td>${res[arr[i].id].price * arr[i].num}</td>`
+						sum += res[arr[i].id].price * arr[i].num;
+					}
+					$(".main_tbody_ajax").html(html);
+					$(".btn_price_area").find("strong").html("￥" + sum);
 				}
 			})
 			
@@ -158,9 +163,8 @@ define(["jquery", "jquery-cookie"], function($){
 				}
 			})
 			
-		
 		})
-		return "goodlist.js载入成功";
+		return "cart.js载入成功";
 	
 	}
 	return {

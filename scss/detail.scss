@@ -290,6 +290,31 @@
                 z-index: 999;
                 position: absolute;
                 top: 34px;
+                .cart_goods{
+                    height: 60px;
+                    border-bottom: 1px dashed gray;
+                    vertical-align: middle;
+                    img{
+                        float: left;
+                        margin: 10px;
+                        width: 40px;
+                    }
+                    .cg_right{
+                        display: inline-block;
+                        margin: 10px;
+                        float: right;
+                        p{
+                            margin-top: 5px;
+                        }
+                    }
+                }
+                .cart_foot{
+                    float: right;
+                    margin-top: 10px;
+                    div{
+                        display: inline-block;
+                    }
+                }
             }
             b{
                 width: 94px;
@@ -538,7 +563,7 @@
     margin: 0 auto;
     overflow: hidden;
     zoom: 1;
-    margin-top: 15px;
+    margin: 15px 0;
     .main_left{
         border: solid 1px #EAEAEA;
         width: 478px;
@@ -560,11 +585,217 @@
     }
     .main_right{
         width: 560px;
-        min-height: 615px;
+        min-height: 478px;
         overflow: hidden;
         float: left;
         padding-left: 60px;
         overflow-x: hidden;
-        background: seashell;
+        .mr_ul{
+            position: relative;
+            li{
+                display: block;
+            }
+            .mr_top{
+                width: 100%;
+                overflow: hidden;
+                zoom: 1;
+                border-bottom: 1px dotted #bfbfbf;
+                dl{
+                    dd{
+                        line-height: 30px;
+                        font-size: 18px;
+                        &:nth-of-type(2n-1){
+                            color: #999;
+                        }
+                    }
+                }
+            }
+            .mr_price{
+                position: relative;
+                padding: 10px 0 10px;
+                border-bottom: 1px dotted #bfbfbf;
+                vertical-align: middle;
+                span{
+                    color: #c8a985;
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                div{
+                    vertical-align: middle;
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    span{
+                        display: inline-block;
+                        text-align: center;
+                        width: 80px;
+                        height: 20px;
+                        line-height: 20px;
+                        font-size: 12px;
+                        color: #fff;
+                        background: #c8a985;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .mr_event{
+                padding-left: 13px;
+                overflow: hidden;
+                border-bottom: 1px dotted #bfbfbf;
+                table{
+                    border-collapse: collapse;
+                    thead{
+                        display: table-header-group;
+                        vertical-align: middle;
+                        border-color: inherit;
+                        tr{
+                            vertical-align: top;
+                            th{
+                                &:nth-of-type(1){
+                                    width: 80px;
+                                }
+                                &:nth-of-type(2){
+                                    width: 400px;
+                                    span{
+                                        color: #c8a985;
+                                    }
+                                }
+                                span{
+                                    line-height: 35px;
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            .mr_color{
+                margin-top: 15px;
+                .mrc_l{
+                    width: 80px;
+                    float: left;
+                    padding-left: 13px;
+                    text-align: left;
+                    overflow: hidden;
+                }
+                .mrc_r{
+                    width: 460px;
+                    min-width: 110px;
+                    float: left;
+                    overflow: hidden;
+                    position: relative;
+                    div{
+                        border: 1px solid #dc0000;
+                        float: left;
+                        margin: 0 13px 13px 0;
+                        position: relative;
+                        min-width: 32px;
+                        a{
+                            display: block;
+                            padding: 3px 4px;
+                            background-color: #fff;
+                            text-align: center;
+                            min-width: 22px;
+                        }
+                    }
+                }
+            }
+            .mr_desc{
+                vertical-align: middle;
+                position: relative;
+                dl{
+                    width: 100%;
+                    display: inline-block;
+                    color: #999;
+                    dt{
+                        display: block;
+                        padding-left: 13px;
+                        width: 80px;
+                        float: left;
+                    }
+                    dd{
+                        float: left;
+                        display: block;
+                        width: 422px;
+                    }
+                }
+            }
+            .mr_btn{
+                width: 100%;
+                overflow: hidden;
+                zoom: 1;
+                margin-top: 15px;
+                position: relative;
+                div{
+                    margin-left: 10px;
+                    height: 35px;
+                    float: left;
+                    position: relative;
+                    cursor: pointer;
+                    span{
+                        display: inline-block;
+                        height: 35px;
+                        line-height: 35px;
+                        vertical-align: middle;
+                        color: rgb(255, 255, 255);
+                        font-family: 微软雅黑;
+                        font-size: 14px;
+                        cursor: pointer;
+                        padding: 0px 28px 0px 52px;
+                        background: rgb(200, 169, 133);
+                        border-width: 0px;
+                        border-style: initial;
+                        border-color: initial;
+                        border-image: initial;
+                    }
+                    b{
+                        width: 25px;
+                        height: 35px;
+                        left: 24px;
+                        top: 0;
+                        display: inline-block;
+                        position: absolute;
+                        background: url(../images/icon/share01.png) no-repeat -270px -335px;
+                        
+                    }
+                }
+            }
+        }
+        .detail_bottom{
+            margin-top: 30px;
+        }
     }
+}
+
+//floatpic
+.floatpic{
+    box-sizing: border-box;
+    border: 5px solid lightgray;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 300px;
+    left: 480px;
+    z-index: 9999999;
+    overflow: hidden;
+    display: none;
+    img{
+        position: absolute;
+        top: -200px;
+        left: -200px;
+        width: 700px;
+    }
+}
+
+//floatbox
+.floatbox{
+    box-sizing: border-box;
+    border: 5px solid lightgray;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 350px;
+    left: 150px;
+    z-index: 9999999;
+    display: none;
 }

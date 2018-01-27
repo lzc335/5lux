@@ -2,71 +2,180 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>登录</title>
+		<title>订单</title>
 		<link rel="shortcut icon" type="image/x-icon" href="images/5lux-icon.ico" />
 		<link rel="stylesheet" href="css/base.min.css" />
+		<link rel="stylesheet" href="css/cart.min.css" />
 		<link rel="stylesheet" href="css/foot.min.css" />
-		<link rel="stylesheet" href="css/login.min.css" />
-		<script type = "text/javascript" src = "js/require.js" async = "true" defer data-main = "js/main_login"></script>
+		<script type = "text/javascript" src = "js/require.js" async = "true" defer data-main = "js/main_cart"></script>
 	</head>
 	<body>
-		<!--head-->
-		<div class="head">
-			<div class="head-center">
-				<a href="index.html" class="head-logo"></a>
-				<span class="head-line"></span>
-				<span class="head-text">欢迎登陆</span>
-				<div class="head-right">
-					<div>
-						<i></i>
-						<p>客服热线：4008-6767-38</p>
-					</div>
-				</div>
+		
+		<!--top-->
+		<div class="topbg">
+			<a name="head"></a>
+			<div class="top">
+				<ul class="left">
+					<li><a href="#">第五大道首页</a><i></i></li>
+					<li><b></b>贵宾专线：4008-6767-38</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#">手机版下载</a>
+						<dl>
+							<dt><img src="images/qr.jpg"/></dt>
+							<dd>扫描下载app</dd>
+							<dd>立即<span>赠送50元</span></dd>
+						</dl>
+					</li>
+					<li><a href="#">帮助中心</a><i></i></li>
+					<li><a href="#" class="my5lux">我的第五大道</a><i></i>
+						<dl>
+							<dd>
+								<a href="#">我的订单</a>
+							</dd>
+							<dd>
+								<a href="#">我的收藏</a>
+							</dd>
+							<dd>
+								<a href="#">已购商品</a>
+							</dd>
+							<dd>
+								<a href="#">我的礼券</a>
+							</dd>
+							<dd>
+								<a href="#">我的积分</a>
+							</dd>
+						</dl>
+					</li>
+					<li><a href="register.html">注册</a><i></i></li>
+					<li><a href="login.html">登录</a><i></i></li>
+				</ul>
 			</div>
 		</div>
-
+		<div class="clearfloat"></div>
+		
 		<!--mid-->
-		<div class="midbg">
-			<div class="mid">
-				<div class="mid-right">
-					<div class="mid-right-title">
-						<p>账户登录</p>
-					</div>
-					<div class="mid-right-body">
-						<div class="mid-right-login">
-							<form action="">
-								<input type="text" class="text" placeholder="用户名"/>
-								<input type="text" class="password" placeholder="密码"/>
-								<div class="error-tip">
-									<div class="error-tip-wp">
-										<!--<p class="tip-text">用户名或密码不正确</p>-->
-									</div>
-								</div>
-								<input type="submit" id="loginsubmit" value="立即登陆" class="submit"/>
-							</form>
-						</div>
-					</div>
-					<div class="mid-right-line"></div>
-					<div class="mid-right-type">
-						<ul class="typeul">
-							<li class="typeli">
-								<a href="#">
-									<i></i>
-								</a>
-							</li>
-							<li class="typeli">
-								<a href="#">
-									<i></i>
-								</a>
-							</li>
-							<li class="typeli">
-								<a href="#">
-									<i></i>
-								</a>
-							</li>
+		<div class="mid">
+			<a href="index.html" class="logo"><img src="images/logo.jpg" alt="" /></a>
+			<a href="#" class="yijian"><img src="images/yijian.jpg" alt="" /></a>
+			<div class="search">
+				<form action="" method="get">
+					<div class="in_con">
+						<input type="text" class="search_input" placeholder="唇部彩妆" />
+						<input type="button" class="search_btn" value="搜&nbsp;索" />
+						<ul>
+							<li><a href="#">太阳镜</a></li>
+							<li><a href="#">美妆</a></li>
+							<li><a href="#">运动户外</a></li>
+							<li><a href="#">箱包</a></li>
+							<li><a href="#">配饰</a></li>
+							<li><a href="#">腕表</a></li>
 						</ul>
 					</div>
+				</form>
+			</div>
+			<div class="cart">
+				<dl>
+					<a href="cart.html">
+						<dt>
+							<img src="images/cart.png" alt="" />
+							（<span id="cart_number">0</span>）
+						</dt>
+					</a>
+					<dd>
+						
+					</dd>
+					<b></b>
+				</dl>
+			</div>
+			<a href="#">
+				<div class="overseaenter"></div>
+			</a>
+		</div>		
+		
+		<!--nav-->
+		<div class="navbg">
+			<div class="nav">
+				<ul class="menu">
+					<li class="menu_item" id="menu_item1">
+						<a href="#" class="shopa">商品分类</a>
+						<!--分类导航-->
+						<div class="leftmenu">
+							<ul>
+							</ul>
+						</div>
+					</li>
+					<li class="menu_item"><a href="#" class="shopb">品牌</a></li>
+					<li class="menu_item"><a href="#" class="shopb">最新</a></li>
+					<li class="menu_item"><a href="#" class="shopb">女士</a></li>
+					<li class="menu_item"><a href="#" class="shopb">男士</a></li>
+					<li class="menu_item"><a href="#" class="shopb">生活馆</a></li>
+					<li class="menu_item"><a href="#" class="shopb">海外馆</a></li>
+					<li class="menu_item"><a href="#" class="shopb">时尚</a></li>
+					<li class="menu_item"><a href="#" class="shopb">特惠</a></li>
+					<li class="menu_item"><a href="#" class="shopb">礼品区</a></li>
+					<li class="menu_item"><a href="#" class="shopb">
+						<i></i>到店</a></li>
+				</ul>
+				<ul class="icon">
+					<li>
+						<div><a href="#"><span></span></a></div>
+					</li>
+					<li>
+						<div><a href="#"><span></span></a></div>
+					</li>
+					<li>
+						<div><a href="#"><span></span></a></div>
+					</li>
+				</ul>
+				<a href="#">
+					<div class="overseaslogo"></div>
+				</a>
+			</div>
+		</div>
+		<div class="clearfloat"></div>
+		
+		<!--main-->
+		<div class="main">
+			<p class="main_step"></p>
+			<div class="clearboth"></div>
+			<div class="main_tbody">
+				<table>
+					<tbody>
+						<tr>
+							<th class="cart_tcheck"><input type="checkbox" checked="checked" />全选</th>
+							<th></th>
+							<th>商品名称</th>
+							<th>商品属性</th>
+							<th>购物价</th>
+							<th>购买数量</th>
+							<th>活动信息</th>
+							<th>小计</th>
+						</tr>
+						<tr class="main_tbody_ajax">
+							<td><input type="checkbox" checked="checked"/></td>
+							<td><img src="images/show/148379896332_800x800_350x350.jpg" alt="" /></td>
+							<td>【预定一个月】 METIS 邮差包 棕色女士手拿包 M40780</td>
+							<td>棕色</td>
+							<td>￥14500</td>
+							<td>1</td>
+							<td></td>
+							<td>14500</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="btn_price_info">
+					<div class="btn_price_area">
+						<p>
+							<span>商品总金额，（不含运费）：</span>
+							<strong>￥14500</strong>
+							<a href=""><span>点击结算</span></a>
+						</p>
+					</div>
+					
 				</div>
+				
 			</div>
 		</div>
 		

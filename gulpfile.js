@@ -89,6 +89,15 @@ gulp.task("scss-detail", () => {
 	.pipe(gulp.dest("dist/css"))
 	.pipe(connect.reload());
 })
+gulp.task("scss-cart", () => {
+	return gulp.src("scss/cart.scss")
+	.pipe(scss())
+	.pipe(gulp.dest("dist/css"))
+	.pipe(minify())
+	.pipe(rename("cart.min.css"))
+	.pipe(gulp.dest("dist/css"))
+	.pipe(connect.reload());
+})
 
 //js
 gulp.task("scripts", () => {
@@ -105,7 +114,7 @@ gulp.task("data", () => {
 })
 
 //整理文件
-gulp.task("build", ["copy-html", "php", "images", "scripts", "data", "scss-index", "scss-base", "scss-foot", "scss-login", "scss-register", "scss-goodslist", "scss-detail"], () => {
+gulp.task("build", ["copy-html", "php", "images", "scripts", "data", "scss-index", "scss-base", "scss-foot", "scss-login", "scss-register", "scss-goodslist", "scss-detail", "scss-cart"], () => {
 	console.log("编译成功");
 })
 
@@ -123,6 +132,7 @@ gulp.task("watch", () => {
 	gulp.watch("scss/register.scss", ["scss-register"]);
 	gulp.watch("scss/goodslist.scss", ["scss-goodslist"]);
 	gulp.watch("scss/detail.scss", ["scss-detail"]);
+	gulp.watch("scss/cart.scss", ["scss-cart"]);
 })
 
 //服务器

@@ -236,6 +236,25 @@
         z-index: 999;
         position: absolute;
         top: 34px; }
+        .mid .cart dl dd .cart_goods {
+          height: 60px;
+          border-bottom: 1px dashed gray;
+          vertical-align: middle; }
+          .mid .cart dl dd .cart_goods img {
+            float: left;
+            margin: 10px;
+            width: 40px; }
+          .mid .cart dl dd .cart_goods .cg_right {
+            display: inline-block;
+            margin: 10px;
+            float: right; }
+            .mid .cart dl dd .cart_goods .cg_right p {
+              margin-top: 5px; }
+        .mid .cart dl dd .cart_foot {
+          float: right;
+          margin-top: 10px; }
+          .mid .cart dl dd .cart_foot div {
+            display: inline-block; }
       .mid .cart dl b {
         width: 94px;
         height: 3px;
@@ -437,7 +456,7 @@
   margin: 0 auto;
   overflow: hidden;
   zoom: 1;
-  margin-top: 15px; }
+  margin: 15px 0; }
   .main .main_left {
     border: solid 1px #EAEAEA;
     width: 478px;
@@ -457,9 +476,173 @@
       height: 100%; }
   .main .main_right {
     width: 560px;
-    min-height: 615px;
+    min-height: 478px;
     overflow: hidden;
     float: left;
     padding-left: 60px;
-    overflow-x: hidden;
-    background: seashell; }
+    overflow-x: hidden; }
+    .main .main_right .mr_ul {
+      position: relative; }
+      .main .main_right .mr_ul li {
+        display: block; }
+      .main .main_right .mr_ul .mr_top {
+        width: 100%;
+        overflow: hidden;
+        zoom: 1;
+        border-bottom: 1px dotted #bfbfbf; }
+        .main .main_right .mr_ul .mr_top dl dd {
+          line-height: 30px;
+          font-size: 18px; }
+          .main .main_right .mr_ul .mr_top dl dd:nth-of-type(2n-1) {
+            color: #999; }
+      .main .main_right .mr_ul .mr_price {
+        position: relative;
+        padding: 10px 0 10px;
+        border-bottom: 1px dotted #bfbfbf;
+        vertical-align: middle; }
+        .main .main_right .mr_ul .mr_price span {
+          color: #c8a985;
+          font-size: 28px;
+          line-height: 34px; }
+        .main .main_right .mr_ul .mr_price div {
+          vertical-align: middle;
+          position: relative;
+          display: inline-block;
+          cursor: pointer; }
+          .main .main_right .mr_ul .mr_price div span {
+            display: inline-block;
+            text-align: center;
+            width: 80px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #fff;
+            background: #c8a985;
+            border-radius: 10px; }
+      .main .main_right .mr_ul .mr_event {
+        padding-left: 13px;
+        overflow: hidden;
+        border-bottom: 1px dotted #bfbfbf; }
+        .main .main_right .mr_ul .mr_event table {
+          border-collapse: collapse; }
+          .main .main_right .mr_ul .mr_event table thead {
+            display: table-header-group;
+            vertical-align: middle;
+            border-color: inherit; }
+            .main .main_right .mr_ul .mr_event table thead tr {
+              vertical-align: top; }
+              .main .main_right .mr_ul .mr_event table thead tr th:nth-of-type(1) {
+                width: 80px; }
+              .main .main_right .mr_ul .mr_event table thead tr th:nth-of-type(2) {
+                width: 400px; }
+                .main .main_right .mr_ul .mr_event table thead tr th:nth-of-type(2) span {
+                  color: #c8a985; }
+              .main .main_right .mr_ul .mr_event table thead tr th span {
+                line-height: 35px; }
+      .main .main_right .mr_ul .mr_color {
+        margin-top: 15px; }
+        .main .main_right .mr_ul .mr_color .mrc_l {
+          width: 80px;
+          float: left;
+          padding-left: 13px;
+          text-align: left;
+          overflow: hidden; }
+        .main .main_right .mr_ul .mr_color .mrc_r {
+          width: 460px;
+          min-width: 110px;
+          float: left;
+          overflow: hidden;
+          position: relative; }
+          .main .main_right .mr_ul .mr_color .mrc_r div {
+            border: 1px solid #dc0000;
+            float: left;
+            margin: 0 13px 13px 0;
+            position: relative;
+            min-width: 32px; }
+            .main .main_right .mr_ul .mr_color .mrc_r div a {
+              display: block;
+              padding: 3px 4px;
+              background-color: #fff;
+              text-align: center;
+              min-width: 22px; }
+      .main .main_right .mr_ul .mr_desc {
+        vertical-align: middle;
+        position: relative; }
+        .main .main_right .mr_ul .mr_desc dl {
+          width: 100%;
+          display: inline-block;
+          color: #999; }
+          .main .main_right .mr_ul .mr_desc dl dt {
+            display: block;
+            padding-left: 13px;
+            width: 80px;
+            float: left; }
+          .main .main_right .mr_ul .mr_desc dl dd {
+            float: left;
+            display: block;
+            width: 422px; }
+      .main .main_right .mr_ul .mr_btn {
+        width: 100%;
+        overflow: hidden;
+        zoom: 1;
+        margin-top: 15px;
+        position: relative; }
+        .main .main_right .mr_ul .mr_btn div {
+          margin-left: 10px;
+          height: 35px;
+          float: left;
+          position: relative;
+          cursor: pointer; }
+          .main .main_right .mr_ul .mr_btn div span {
+            display: inline-block;
+            height: 35px;
+            line-height: 35px;
+            vertical-align: middle;
+            color: white;
+            font-family: 微软雅黑;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 0px 28px 0px 52px;
+            background: #c8a985;
+            border-width: 0px;
+            border-style: initial;
+            border-color: initial;
+            border-image: initial; }
+          .main .main_right .mr_ul .mr_btn div b {
+            width: 25px;
+            height: 35px;
+            left: 24px;
+            top: 0;
+            display: inline-block;
+            position: absolute;
+            background: url(../images/icon/share01.png) no-repeat -270px -335px; }
+    .main .main_right .detail_bottom {
+      margin-top: 30px; }
+
+.floatpic {
+  box-sizing: border-box;
+  border: 5px solid lightgray;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 300px;
+  left: 480px;
+  z-index: 9999999;
+  overflow: hidden;
+  display: none; }
+  .floatpic img {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 700px; }
+
+.floatbox {
+  box-sizing: border-box;
+  border: 5px solid lightgray;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 350px;
+  left: 150px;
+  z-index: 9999999;
+  display: none; }
