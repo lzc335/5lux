@@ -258,6 +258,15 @@
             width: 290px;
             background: #fff;
             position: relative;
+            .entercart{
+                position: absolute;
+                left: 10px;
+                bottom: 13px;
+                background: gray;
+                color: white;
+                border: 2px solid lightgray;
+                padding: 4px;
+            }
             dt{
                 width: 94px;
                 height: 32px;
@@ -294,6 +303,7 @@
                     height: 60px;
                     border-bottom: 1px dashed gray;
                     vertical-align: middle;
+                    position: relative;
                     img{
                         float: left;
                         margin: 10px;
@@ -302,7 +312,8 @@
                     .cg_right{
                         display: inline-block;
                         margin: 10px;
-                        float: right;
+                        position: absolute;
+                        right: 0;
                         p{
                             margin-top: 5px;
                         }
@@ -798,4 +809,26 @@
     left: 150px;
     z-index: 9999999;
     display: none;
+}
+
+//alertdiv
+#alertdiv{
+    border: 5px solid lightgrey;
+    position: fixed;
+    width: 300px;
+    height: 120px;
+    background: white;
+    z-index: 99;
+    top: 300px;
+    left: 600px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 50px;
+    div{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
 }

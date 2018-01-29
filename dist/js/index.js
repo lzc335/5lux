@@ -9,8 +9,8 @@ define(["jquery", "jquery-cookie"], function($){
 					var html = "";
 					var htmlFirst = "";
 					for(var i = 0; i < res.length; i++){
-						html += `<li><a href="#"><img src="${res[i].img}" alt="" /></a></li>`;
-						htmlFirst = `<li><a href="#"><img src="${res[0].img}" alt="" /></a></li>`;
+						html += `<li><a href="goodslist.html"><img src="${res[i].img}" alt="" /></a></li>`;
+						htmlFirst = `<li><a href="goodslist.html"><img src="${res[0].img}" alt="" /></a></li>`;
 					}
 					html += htmlFirst;
 					$("#banner ul").html(html);
@@ -95,7 +95,7 @@ define(["jquery", "jquery-cookie"], function($){
 					var html = "";
 					for(var i = 0; i < res.length; i++){
 						html += `<li>
-									<a href="#">
+									<a href="goodslist.html">
 										<img src="${res[i].img.show}" alt="" />
 										<div>
 											<div class="brand_hider">
@@ -136,12 +136,12 @@ define(["jquery", "jquery-cookie"], function($){
 			}
 			sc_car();
 			//购物车出现消失
-			$(".mid").find(".cart").on("mouseenter", "dt", function(){
+			$(".mid").on("mouseenter", ".cart", function(){
 				sc_msg();
 				$(".cart").find("dd").attr("style", "display: block;");
 				$(".cart").find("b").attr("style", "display: block;");
 			})
-			$(".mid").find(".cart").on("mouseleave", "dt", function(){
+			$(".mid").on("mouseleave", ".cart", function(){
 				$(".cart").find("dd").attr("style", "display: none;");
 				$(".cart").find("b").attr("style", "display: none;");
 			})
@@ -161,6 +161,8 @@ define(["jquery", "jquery-cookie"], function($){
 
 						var arr = eval($.cookie("goods"));
 						var html = '';
+						var sum = 0;
+						var htmlLast = '';
 						for(var i = 0; i < arr.length; i++){
 							//用id当做下标取出数据${res[arr[i].id].img}
 							html += `<div class="cart_goods">
@@ -169,11 +171,16 @@ define(["jquery", "jquery-cookie"], function($){
 											<p>价格：${res[arr[i].id].price}</p>
 											<p>数量：${arr[i].num}</p>
 										</div>
-									</div>
-									<div class="cart_foot">
-										<div class="sum">总价：${res[arr[i].id].price * arr[i].num}</div>
 									</div>`
+							sum += res[arr[i].id].price * arr[i].num;
 						}
+						htmlLast = `<div class="cart_foot">
+										<div class="sum">总价：${"￥" + sum}</div>
+										<a href="cart.html">
+											<div class="entercart">进入购物车</div>
+										</a>
+									</div>`
+						html += htmlLast;
 						$(".cart dd").html(html);
 					}
 				})
@@ -227,7 +234,7 @@ define(["jquery", "jquery-cookie"], function($){
 					var html = "";
 					for(var i = 0; i < res.length; i++){
 						html += `<li>
-											<a href="#">
+											<a href="goodslist.html">
 												<img src="${res[i].img}" alt="" />
 												<i></i>
 											</a>
@@ -254,7 +261,7 @@ define(["jquery", "jquery-cookie"], function($){
 					for(var i = 0; i < 2; i++){
 						html += `<li>
 											<div class="hotitems_left">
-												<a href="#">
+												<a href="goodslist.html">
 													<img src="${res[0].img}" alt="" />
 												</a>
 											</div>
@@ -279,7 +286,7 @@ define(["jquery", "jquery-cookie"], function($){
 															<p>${res[2].price}</p>
 														</div>
 														<div class="hotitems_toppic">
-															<a href="#">
+															<a href="goodslist.html">
 																<img src="${res[2].img}" alt="" />
 															</a>
 														</div>
@@ -291,7 +298,7 @@ define(["jquery", "jquery-cookie"], function($){
 															<p>${res[3].price}</p>
 														</div>
 														<div class="hotitems_toppic">
-															<a href="#">
+															<a href="goodslist.html">
 																<img src="${res[3].img}" alt="" />
 															</a>
 														</div>
@@ -305,7 +312,7 @@ define(["jquery", "jquery-cookie"], function($){
 															<p>${res[4].price}</p>
 														</div>
 														<div class="hotitems_toppic">
-															<a href="#">
+															<a href="goodslist.html">
 																<img src="${res[4].img}" alt="" />
 															</a>
 														</div>
@@ -317,7 +324,7 @@ define(["jquery", "jquery-cookie"], function($){
 															<p>${res[5].price}</p>
 														</div>
 														<div class="hotitems_toppic">
-															<a href="#">
+															<a href="goodslist.html">
 																<img src="${res[5].img}" alt="" />
 															</a>
 														</div>
@@ -329,7 +336,7 @@ define(["jquery", "jquery-cookie"], function($){
 															<p>${res[6].price}</p>
 														</div>
 														<div class="hotitems_toppic">
-															<a href="#">
+															<a href="goodslist.html">
 																<img src="${res[6].img}" alt="" />
 															</a>
 														</div>
@@ -343,7 +350,7 @@ define(["jquery", "jquery-cookie"], function($){
 											<div class="hotitems_3li_one hotitems_3li_img">
 												<dl>
 													<dd>
-														<a href="#">
+														<a href="goodslist.html">
 															<img src="${res[7].img}" alt="" />
 														</a>
 													</dd>
@@ -354,7 +361,7 @@ define(["jquery", "jquery-cookie"], function($){
 											<div class="hotitems_3li_two hotitems_3li_img">
 												<dl>
 													<dd>
-														<a href="#">
+														<a href="goodslist.html">
 															<img src="${res[8].img}" alt="" />
 														</a>
 													</dd>
@@ -363,7 +370,7 @@ define(["jquery", "jquery-cookie"], function($){
 											<div class="hotitems_3li_two hotitems_3li_img">
 												<dl>
 													<dd>
-														<a href="#">
+														<a href="goodslist.html">
 															<img src="${res[9].img}" alt="" />
 														</a>
 													</dd>
@@ -374,7 +381,7 @@ define(["jquery", "jquery-cookie"], function($){
 											<div class="hotitems_3li_two hotitems_3li_img">
 												<dl>
 													<dd>
-														<a href="#">
+														<a href="goodslist.html">
 															<img src="${res[10].img}" alt="" />
 														</a>
 													</dd>
@@ -383,7 +390,7 @@ define(["jquery", "jquery-cookie"], function($){
 											<div class="hotitems_3li_two hotitems_3li_img">
 												<dl>
 													<dd>
-														<a href="#">
+														<a href="goodslist.html">
 															<img src="${res[11].img}" alt="" />
 														</a>
 													</dd>
@@ -445,7 +452,7 @@ define(["jquery", "jquery-cookie"], function($){
 					var goods2 = "";
 					var goods3 = "";
 					for(var i = 0; i < res.length; i++){
-						goods2 = `<a href="#"><img src="${res[i].showimg}" alt="" /></a>
+						goods2 = `<a href="goodslist.html"><img src="${res[i].showimg}" alt="" /></a>
 								<div class="goods2_label">
 									<dl>
 										<dd>${res[i].name}</dd>
@@ -456,16 +463,16 @@ define(["jquery", "jquery-cookie"], function($){
 								</div>`;
 								
 						goods3 = `<div class="goods3pic">
-									<a href=""><img src="${res[i].img}" alt="" /></a>
+									<a href="goodslist.html"><img src="${res[i].img}" alt="" /></a>
 								</div>
 								<div class="goods3pic">
-									<a href=""><img src="${res[i].img}" alt="" /></a>
+									<a href="goodslist.html"><img src="${res[i].img}" alt="" /></a>
 								</div>
 								<div class="goods3pic">
-									<a href=""><img src="${res[i].img}" alt="" /></a>
+									<a href="goodslist.html"><img src="${res[i].img}" alt="" /></a>
 								</div>
 								<div class="goods3pic">
-									<a href=""><img src="${res[i].img}" alt="" /></a>
+									<a href="goodslist.html"><img src="${res[i].img}" alt="" /></a>
 								</div>`;
 						$(".goods").eq(i).find(".goods2").html(goods2);
 						$(".goods").eq(i).find(".goods3").html(goods3);

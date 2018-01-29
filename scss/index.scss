@@ -258,6 +258,15 @@
             width: 290px;
             background: #fff;
             position: relative;
+            .entercart{
+                position: absolute;
+                left: 10px;
+                bottom: 13px;
+                background: gray;
+                color: white;
+                border: 2px solid lightgray;
+                padding: 4px;
+            }
             dt{
                 width: 94px;
                 height: 32px;
@@ -294,6 +303,7 @@
                     height: 60px;
                     border-bottom: 1px dashed gray;
                     vertical-align: middle;
+                    position: relative;
                     img{
                         float: left;
                         margin: 10px;
@@ -302,7 +312,8 @@
                     .cg_right{
                         display: inline-block;
                         margin: 10px;
-                        float: right;
+                        position: absolute;
+                        right: 0;
                         p{
                             margin-top: 5px;
                         }

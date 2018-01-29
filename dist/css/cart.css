@@ -207,6 +207,14 @@
       width: 290px;
       background: #fff;
       position: relative; }
+      .mid .cart dl .entercart {
+        position: absolute;
+        left: 10px;
+        bottom: 13px;
+        background: gray;
+        color: white;
+        border: 2px solid lightgray;
+        padding: 4px; }
       .mid .cart dl dt {
         width: 94px;
         height: 32px;
@@ -239,7 +247,8 @@
         .mid .cart dl dd .cart_goods {
           height: 60px;
           border-bottom: 1px dashed gray;
-          vertical-align: middle; }
+          vertical-align: middle;
+          position: relative; }
           .mid .cart dl dd .cart_goods img {
             float: left;
             margin: 10px;
@@ -247,7 +256,8 @@
           .mid .cart dl dd .cart_goods .cg_right {
             display: inline-block;
             margin: 10px;
-            float: right; }
+            position: absolute;
+            right: 0; }
             .mid .cart dl dd .cart_goods .cg_right p {
               margin-top: 5px; }
         .mid .cart dl dd .cart_foot {

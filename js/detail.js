@@ -8,18 +8,32 @@ define(["jquery", "jquery-cookie"], function($){
 				type: "GET",
 				success: function(res){
 					var html = "";
-					html = `<div class="main_left"><img src="${res[0].img}" alt="" /><div class="floatbox"></div></div>
+	                var search = location.search;
+	                var start = search.indexOf("id");
+	                if(start == -1){
+	                    return null;
+	                }else{
+	                    var end = search.indexOf("&", start);
+	                    if(end == -1){
+	                        end = search.length;
+	                    }
+	                }
+	                var subStr = search.substring(start, end);
+	                var arr = subStr.split("=");
+	                var id = arr[1];
+
+					html = `<div class="main_left"><img src="${res[id].show}" alt="" /><div class="floatbox"></div></div>
 							<div class="main_right">
 								<ul class="mr_ul">
 									<li class="mr_top">
 										<dl>
-											<dd><a href="#">${res[0].brand}</a></dd>
-											<dd><a href="#">${res[0].title}</a></dd>
-											<dd>${"货号: " + res[0].label}</dd>
+											<dd><a href="#">${res[id].brand}</a></dd>
+											<dd><a href="#">${res[id].title}</a></dd>
+											<dd>${"货号: " + res[id].label}</dd>
 										</dl>
 									</li>
 									<li class="mr_price">
-										<span>${"￥" + res[0].price}</span>
+										<span>${"￥" + res[id].price}</span>
 										<div>
 											<span>红卡会员价</span>
 										</div>
@@ -43,7 +57,7 @@ define(["jquery", "jquery-cookie"], function($){
 											<span>颜色</span>
 										</div>
 										<div class="mrc_r">
-											<div><a href="">${res[0].color}</a></div>
+											<div><a href="">${res[id].color}</a></div>
 										</div>
 									</li>
 									<li class="mr_desc">
@@ -64,7 +78,7 @@ define(["jquery", "jquery-cookie"], function($){
 											<dd>白金钻石顺丰包邮，注册用户满99元免邮</dd>
 										</dl>
 									</li>
-									<li class="mr_btn" id="${res[0].id}">
+									<li class="mr_btn" id="${res[id].id}">
 										<div>
 											<span>加入购物袋</span>
 											<b></b>
@@ -74,6 +88,7 @@ define(["jquery", "jquery-cookie"], function($){
 								<div class="detail_bottom"><img src="images/detail_bottom.png" alt="" /></div>
 							</div>`;
 					$(".main").html(html);
+					$(".floatpic").html(`<img class="hideimg" src="${res[id].show}" alt="" />`)
 				}
 			})
 			//添加到购物车
@@ -122,8 +137,38 @@ define(["jquery", "jquery-cookie"], function($){
 				}
 				// alert($.cookie("goods"));
 				sc_car();
+				singleton();
 				//为了阻止冒泡
 				return false;
+			})
+			//弹出窗口
+			var singleton = (function(){
+				var oDiv = null; 
+
+				var createDiv = function(){
+					if(!oDiv){
+						var sc_str = $.cookie("goods");
+						if(sc_str){ //如果cookie存在
+							var arr = eval(sc_str);
+							var sum = 0; //用于累加的和
+							for(var i in arr){
+								sum += arr[i].num;
+							}
+						}
+						oDiv = document.createElement("div");
+						oDiv.id = "alertdiv";
+						oDiv.innerHTML = `成功加入购物袋<br />当前购物袋内的商品数量为
+										<span>${sum}</span>
+										<div>X&nbsp;</div>`;
+					
+						document.body.appendChild(oDiv);
+					}
+				}
+				
+				return createDiv;
+			})();
+			$(document).on("click", "#alertdiv div", function(){
+				$("#alertdiv").remove();
 			})
 			//计算购物车数字
 			function sc_car(){
@@ -142,12 +187,12 @@ define(["jquery", "jquery-cookie"], function($){
 			}
 			sc_car();
 			//购物车出现消失
-			$(".mid").find(".cart").on("mouseenter", "dt", function(){
+			$(".mid").on("mouseenter", ".cart", function(){
 				sc_msg();
 				$(".cart").find("dd").attr("style", "display: block;");
 				$(".cart").find("b").attr("style", "display: block;");
 			})
-			$(".mid").find(".cart").on("mouseleave", "dt", function(){
+			$(".mid").on("mouseleave", ".cart", function(){
 				$(".cart").find("dd").attr("style", "display: none;");
 				$(".cart").find("b").attr("style", "display: none;");
 			})
@@ -167,6 +212,8 @@ define(["jquery", "jquery-cookie"], function($){
 
 						var arr = eval($.cookie("goods"));
 						var html = '';
+						var sum = 0;
+						var htmlLast = '';
 						for(var i = 0; i < arr.length; i++){
 							//用id当做下标取出数据${res[arr[i].id].img}
 							html += `<div class="cart_goods">
@@ -175,11 +222,16 @@ define(["jquery", "jquery-cookie"], function($){
 											<p>价格：${res[arr[i].id].price}</p>
 											<p>数量：${arr[i].num}</p>
 										</div>
-									</div>
-									<div class="cart_foot">
-										<div class="sum">总价：${res[arr[i].id].price * arr[i].num}</div>
 									</div>`
+							sum += res[arr[i].id].price * arr[i].num;
 						}
+						htmlLast = `<div class="cart_foot">
+										<div class="sum">总价：${"￥" + sum}</div>
+										<a href="cart.html">
+											<div class="entercart">进入购物车</div>
+										</a>
+									</div>`
+						html += htmlLast;
 						$(".cart dd").html(html);
 					}
 				})

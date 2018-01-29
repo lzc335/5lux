@@ -18,12 +18,12 @@ define(["jquery", "jquery-cookie"], function($){
 			}
 			sc_car();
 			//购物车出现消失
-			$(".mid").find(".cart").on("mouseenter", "dt", function(){
+			$(".mid").on("mouseenter", ".cart", function(){
 				sc_msg();
 				$(".cart").find("dd").attr("style", "display: block;");
 				$(".cart").find("b").attr("style", "display: block;");
 			})
-			$(".mid").find(".cart").on("mouseleave", "dt", function(){
+			$(".mid").on("mouseleave", ".cart", function(){
 				$(".cart").find("dd").attr("style", "display: none;");
 				$(".cart").find("b").attr("style", "display: none;");
 			})
@@ -43,6 +43,8 @@ define(["jquery", "jquery-cookie"], function($){
 
 						var arr = eval($.cookie("goods"));
 						var html = '';
+						var sum = 0;
+						var htmlLast = '';
 						for(var i = 0; i < arr.length; i++){
 							//用id当做下标取出数据${res[arr[i].id].img}
 							html += `<div class="cart_goods">
@@ -51,11 +53,16 @@ define(["jquery", "jquery-cookie"], function($){
 											<p>价格：${res[arr[i].id].price}</p>
 											<p>数量：${arr[i].num}</p>
 										</div>
-									</div>
-									<div class="cart_foot">
-										<div class="sum">总价：${res[arr[i].id].price * arr[i].num}</div>
 									</div>`
+							sum += res[arr[i].id].price * arr[i].num;
 						}
+						htmlLast = `<div class="cart_foot">
+										<div class="sum">总价：${"￥" + sum}</div>
+										<a href="cart.html">
+											<div class="entercart">进入购物车</div>
+										</a>
+									</div>`
+						html += htmlLast;
 						$(".cart dd").html(html);
 					}
 				})
@@ -77,19 +84,32 @@ define(["jquery", "jquery-cookie"], function($){
 					var arr = eval($.cookie("goods"));
 					var html = '';
 					var sum = 0;
+					var htmlFirst = `<tr>
+										<th class="cart_tcheck"><input type="checkbox" checked="checked" />全选</th>
+										<th></th>
+										<th>商品名称</th>
+										<th>商品属性</th>
+										<th>购物价</th>
+										<th>购买数量</th>
+										<th>活动信息</th>
+										<th>小计</th>
+									</tr>`
 					for(var i = 0; i < arr.length; i++){
 						//用id当做下标取出数据${res[arr[i].id].img}
-						html += `<td><input type="checkbox" checked="checked"/></td>
-								<td><img src="${res[arr[i].id].img}" alt="" /></td>
-								<td>${res[arr[i].id].title}</td>
-								<td>${res[arr[i].id].color}</td>
-								<td>￥${res[arr[i].id].price}</td>
-								<td>${arr[i].num}</td>
-								<td></td>
-								<td>${res[arr[i].id].price * arr[i].num}</td>`
+						html += `<tr class="main_tbody_ajax">
+									<td><input type="checkbox" checked="checked"/></td>
+									<td><img src="${res[arr[i].id].img}" alt="" /></td>
+									<td>${res[arr[i].id].title}</td>
+									<td>${res[arr[i].id].color}</td>
+									<td>￥${res[arr[i].id].price}</td>
+									<td>${arr[i].num}</td>
+									<td></td>
+									<td>${res[arr[i].id].price * arr[i].num}</td>
+								</tr>`
 						sum += res[arr[i].id].price * arr[i].num;
 					}
-					$(".main_tbody_ajax").html(html);
+					html = htmlFirst + html
+					$(".main_tbody").find("tbody").html(html);
 					$(".btn_price_area").find("strong").html("￥" + sum);
 				}
 			})

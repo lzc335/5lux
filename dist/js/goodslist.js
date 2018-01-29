@@ -18,12 +18,12 @@ define(["jquery", "jquery-cookie"], function($){
 			}
 			sc_car();
 			//购物车出现消失
-			$(".mid").find(".cart").on("mouseenter", "dt", function(){
+			$(".mid").on("mouseenter", ".cart", function(){
 				sc_msg();
 				$(".cart").find("dd").attr("style", "display: block;");
 				$(".cart").find("b").attr("style", "display: block;");
 			})
-			$(".mid").find(".cart").on("mouseleave", "dt", function(){
+			$(".mid").on("mouseleave", ".cart", function(){
 				$(".cart").find("dd").attr("style", "display: none;");
 				$(".cart").find("b").attr("style", "display: none;");
 			})
@@ -43,6 +43,8 @@ define(["jquery", "jquery-cookie"], function($){
 
 						var arr = eval($.cookie("goods"));
 						var html = '';
+						var sum = 0;
+						var htmlLast = '';
 						for(var i = 0; i < arr.length; i++){
 							//用id当做下标取出数据${res[arr[i].id].img}
 							html += `<div class="cart_goods">
@@ -51,15 +53,21 @@ define(["jquery", "jquery-cookie"], function($){
 											<p>价格：${res[arr[i].id].price}</p>
 											<p>数量：${arr[i].num}</p>
 										</div>
-									</div>
-									<div class="cart_foot">
-										<div class="sum">总价：${res[arr[i].id].price * arr[i].num}</div>
 									</div>`
+							sum += res[arr[i].id].price * arr[i].num;
 						}
+						htmlLast = `<div class="cart_foot">
+										<div class="sum">总价：${"￥" + sum}</div>
+										<a href="cart.html">
+											<div class="entercart">进入购物车</div>
+										</a>
+									</div>`
+						html += htmlLast;
 						$(".cart dd").html(html);
 					}
 				})
 			}
+			
 			//加载商品列表数据
 			$.ajax({
 				url: "../data/goodslist.json",
@@ -72,11 +80,11 @@ define(["jquery", "jquery-cookie"], function($){
 										<div class="inbox">
 											<ul>
 												<li>
-													<a href="detail.html"><img src="${res[i].img}" alt="" /></a>
+													<a href="detail.html?id=${i}"><img src="${res[i].img}" alt="" /></a>
 												</li>
-												<li><a href="detail.html"></a></li>
+												<li><a href="detail.html?id=${i}"></a></li>
 												<li>
-													<a href="detail.html">${res[i].title}</a>
+													<a href="detail.html?id=${i}">${res[i].title}</a>
 												</li>
 												<li>${"￥" + res[i].price}</li>
 											</ul>
